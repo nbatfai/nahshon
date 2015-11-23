@@ -70,7 +70,7 @@ public:
   void write_session ( std::string msg )
   {
 
-                  std::cerr << "SW write_session "<< msg << std::endl;
+    std::cerr << "SW write_session "<< msg << std::endl;
 
     char data[4096];
 
@@ -88,7 +88,7 @@ public:
   void write_msg ( std::string msg )
   {
 
-                  std::cerr << "CW write_msg "<< msg << std::endl;
+    std::cerr << "CW write_msg "<< msg << std::endl;
 
     char data[4096];
 
@@ -102,8 +102,8 @@ public:
         std::cerr << "Ooops: " << e.what() << std::endl;
       }
   }
-  
-  
+
+
   void read_session ( void )
   {
     char data[4096];
@@ -112,32 +112,36 @@ public:
       {
         for ( ;; )
           {
-            boost::system::error_code err;
-            size_t length = client_socket_.read_some ( boost::asio::buffer ( data ), err );
+            boost::system::error_code error;
+            size_t length = client_socket_.read_some ( boost::asio::buffer ( data ), error );
 
-            if ( err == boost::asio::error::eof )
+            if ( ! error )
               {
+                role = SERVER;
+
+                if ( length )
+                  {
+                    std::string s ( data, data+length );
+                    buf = s;
+                    already_read_ = false;
+
+                    std::cerr << "SR read_session "<< buf << std::endl;
+
+                  }
+
+              }
+            else if ( error == boost::asio::error::eof )
+              {
+                std::cerr << "read_some error: " << error << std::endl;
                 hasSession = false;
                 break;
               }
-            else if ( err )
+            else if ( error )
               {
-                throw boost::system::system_error ( err );
+                std::cerr << "read_some error: " << error << std::endl;
+                throw boost::system::system_error ( error );
               }
 
-              role = SERVER;
-              
-              
-            if ( length )
-              {
-                std::string s ( data, data+length );
-                buf = s;
-                already_read_ = false;
-		
-                  std::cerr << "SR read_session "<< buf << std::endl;
-		
-		
-              }
           }
       }
     catch ( std::exception& e )
@@ -199,49 +203,54 @@ public:
     boost::asio::ip::tcp::socket socket ( io_service_ );
     boost::asio::connect ( socket, iterator );
 
-    socket_ = std::move ( socket );    
-    
+    socket_ = std::move ( socket );
+
     hasSession2 = true;
-    
+
     char data[4096];
 
     size_t length = std::sprintf ( data, "I am Samu" );
     socket_.send ( boost::asio::buffer ( data, length ) );
-    
+
   }
-    
+
   std::string client_msg ( void )
-  {    
+  {
     char data[4096];
-    
-    
-            boost::system::error_code err;
-            size_t length = socket_.read_some ( boost::asio::buffer ( data ), err );
 
-            if ( err == boost::asio::error::eof )
-              {
-                
-              }
-            else if ( err )
-              {
-                throw boost::system::system_error ( err );
-              }
 
-              
-              role = CLIENT;
-              
-            if ( length )
-              {
-                std::string s ( data, data+length );
-                buf2_ = s;
-                already_read2_ = false;
-		
-                  std::cerr << "CR client_msg "<< buf2_ << std::endl;
-		
-		
-return buf2_;		
-              }	
-	return "quit";
+    boost::system::error_code error;
+    size_t length = socket_.read_some ( boost::asio::buffer ( data ), error );
+
+    if ( !error )
+      {
+        role = CLIENT;
+
+        if ( length )
+          {
+            std::string s ( data, data+length );
+            buf2_ = s;
+            already_read2_ = false;
+
+            std::cerr << "CR client_msg "<< buf2_ << std::endl;
+
+            return buf2_;
+          }
+
+      }
+    else if ( error == boost::asio::error::interrupted )
+      {
+        // resizing ncurses window
+        std::cerr << "read_some error: " << error << std::endl;	
+      }
+    else if ( error == boost::asio::error::eof )
+      {
+
+        std::cerr << "read_some error: " << error << std::endl;
+
+      }
+
+    return "quit";
   }
 
 
@@ -268,8 +277,8 @@ return buf2_;
 
       }
   }
-  
-  
+
+
   bool has_session ( void ) const
   {
     return hasSession;
@@ -283,7 +292,7 @@ return buf2_;
   {
     return role;
   }
-  
+
 
 private:
   SamuRole role = SERVER;
@@ -297,8 +306,8 @@ private:
   bool already_read2_ {false};
   std::string buf2_;
   bool hasSession2 {false};
-  
-  
+
+
 };
 
 #endif

@@ -239,12 +239,22 @@ public:
   }
 
   int role{0};
+
+  void refresh ( int role )
+  {
+   // ncurses_mutex.lock();
+   // this->role = role;
+   // ui();
+   // ncurses_mutex.unlock();
+  }
+
   
+private:
 
   void ui ( void )
   {
     
-    
+    /*
 #ifdef NETCHAT
 
 if(!role) 
@@ -261,7 +271,7 @@ else
         wrefresh ( log_iw );
 
 #endif    
-    
+    */
     
     int  max_x, max_y;
 
@@ -305,7 +315,6 @@ else
       }
   }
 
-private:
   
   std::mutex ncurses_mutex;
   std::string buf;

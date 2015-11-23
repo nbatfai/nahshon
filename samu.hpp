@@ -176,8 +176,7 @@ public:
     for ( ;; )
       {
 	
-	disp.role = 1;
-	disp.ui();
+	disp.refresh(1);
 	
         std::string msg = net.client_msg();
         if ( quit.compare(msg) == 0)

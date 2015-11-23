@@ -132,9 +132,7 @@ void Samu::NetworkCaregiverShell ( void )
               sleep = 0;
               state = NETWORK;
 
-	      disp.role = 0;
-	disp.ui();
-
+              disp.refresh(0);
 
               if ( !line.compare ( 0, cmd_prefix.length(), cmd_prefix ) )
                 {
