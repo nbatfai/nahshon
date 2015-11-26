@@ -138,6 +138,19 @@ public:
     vi.clear();
   }
 
+  SPOTriplets str2triplets ( std::string str )
+  {
+    SPOTriplets tv;
+
+    std::istringstream iss ( str );
+    SPOTriplet t;
+    iss >> t;
+
+    tv.push_back ( t );
+
+    return tv;
+  }
+
   void FamilyCaregiverShell ( void );
   void NetworkCaregiverShell ( void );
   void terminal ( void )
@@ -168,27 +181,52 @@ public:
   void client ( void )
   {
     sleep_ = false;
-    
-    net.start_client ( "localhost", 2006 );
 
-      std::string quit ("quit");
+    net.start_client ( "localhost", 2006 );
 
     for ( ;; )
       {
-	
-	disp.refresh(1);
-	
-        std::string msg = net.client_msg();
-        if ( quit.compare(msg) == 0)
+
+        disp.refresh ( 1 );
+
+        std::string msg;
+        bool eof = false;
+
+        for ( ; !eof; )
+          {
+            msg.clear();
+
+            try
+              {
+                msg = net.client_msg();
+		if(msg.size() > 0)
+		  break;
+              }
+            catch ( boost::system::system_error e )
+              {
+		boost::system::error_code error = e.code();
+                std::cerr << e.what() << std::endl;
+#ifdef DISP_CURSES
+                disp.log ( e.what() );
+#endif
+
+                if ( error == boost::asio::error::interrupted )
+                  {
+                    eof = false;
+                  }
+                else if ( error == boost::asio::error::eof )
+                  {
+                    eof = true;
+                  }
+
+              }
+
+          }
+
+        if ( msg.size() == 0 || eof )
           break;
 
-
-        std::istringstream iss ( msg );
-        SPOTriplet t;
-        iss >> t;
-
-        SPOTriplets tv;
-        tv.push_back ( t );
+        SPOTriplets tv = str2triplets ( msg );
 
         try
           {
@@ -202,8 +240,6 @@ public:
             disp.log ( err );
 #endif
           }
-
-
 
       }
   }
@@ -278,38 +314,38 @@ public:
 
         old_talk_id = id;
 
-        SPOTriplet response = (vi << triplets);
+        SPOTriplet response = ( vi << triplets );
 
         msg_mutex.unlock();
 
-	
-	
-#ifdef NETCHAT
-      std::string nr = response.s + ' ' + response.p + ' ' + response.o;
 
-if( net.get_role() == SERVER)
-{
-      if ( net.has_session() && !sleep_ )
-        net.write_session ( nr );
-} 
-else 
-{
-      if ( net.has_session2() && !sleep_ )
-        net.write_msg ( nr );  
-}
-      
+
+#ifdef NETCHAT
+        std::string nr = response.s + ' ' + response.p + ' ' + response.o;
+
+        if ( net.get_role() == SERVER )
+          {
+            if ( net.has_session() && !sleep_ )
+              net.write_session ( nr );
+          }
+        else
+          {
+            if ( net.has_session2() && !sleep_ )
+              net.write_msg ( nr );
+          }
+
 #endif
-	
-	
-	
+
+
+
       }
     else
       {
         throw "My attention diverted elsewhere.";
       }
 
-      
-      
+
+
   }
 
 
@@ -441,7 +477,7 @@ private:
 //#endif
 
 
-    SPOTriplet operator<< ( std::vector<SPOTriplet> triplets ) throw (const char *)
+    SPOTriplet operator<< ( std::vector<SPOTriplet> triplets ) throw ( const char * )
     {
 
       if ( !triplets.size() )
@@ -706,23 +742,23 @@ private:
 
       std::cerr << r << std::endl;
 
-/* még ennek a fgv.-nek a vége előtt jön a read e miatt, ebből fagyó szinkronizációs probléme lesz     
-#ifdef NETCHAT
-      std::string nr = response.s + ' ' + response.p + ' ' + response.o;
+      /* még ennek a fgv.-nek a vége előtt jön a read e miatt, ebből fagyó szinkronizációs probléme lesz
+      #ifdef NETCHAT
+            std::string nr = response.s + ' ' + response.p + ' ' + response.o;
 
-if( samu.net.get_role() == SERVER)
-{
-      if ( samu.net.has_session() && !samu.sleep_ )
-        samu.net.write_session ( nr );
-} 
-else 
-{
-      if ( samu.net.has_session2() && !samu.sleep_ )
-        samu.net.write_msg ( nr );  
-}
-      
-#endif
-*/
+      if( samu.net.get_role() == SERVER)
+      {
+            if ( samu.net.has_session() && !samu.sleep_ )
+              samu.net.write_session ( nr );
+      }
+      else
+      {
+            if ( samu.net.has_session2() && !samu.sleep_ )
+              samu.net.write_msg ( nr );
+      }
+
+      #endif
+      */
 
 #ifdef DISP_CURSES
       samu.disp.log ( r );
@@ -754,7 +790,7 @@ else
 #endif
 
       return response;
-      
+
     }
 
     double reward ( void )

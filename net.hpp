@@ -218,7 +218,6 @@ public:
   {
     char data[4096];
 
-
     boost::system::error_code error;
     size_t length = socket_.read_some ( boost::asio::buffer ( data ), error );
 
@@ -241,16 +240,19 @@ public:
     else if ( error == boost::asio::error::interrupted )
       {
         // resizing ncurses window
-        std::cerr << "read_some error: " << error << std::endl;	
+        std::cerr << "read_some error: " << error << std::endl;
+        throw boost::system::system_error ( error );
+
       }
     else if ( error == boost::asio::error::eof )
       {
 
         std::cerr << "read_some error: " << error << std::endl;
+        throw boost::system::system_error ( error );
 
       }
 
-    return "quit";
+    return "";
   }
 
 
@@ -266,9 +268,10 @@ public:
       }
   }
 
+  /*
   void cg_read2 ( void )
   {
-    if ( buf2_.size() > 0 &&  !already_read2_ /*( ch = wgetch ( shell_w ) ) != ERR*/ )
+    if ( buf2_.size() > 0 &&  !already_read2_  )
       {
         already_read2_ = true;
 
@@ -277,7 +280,7 @@ public:
 
       }
   }
-
+  */
 
   bool has_session ( void ) const
   {
