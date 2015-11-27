@@ -181,12 +181,10 @@ public:
             int length = std::sprintf ( data, "Samu is talking with somebody else" );
             try
               {
-                buf.clear();
                 boost::asio::write ( socket, boost::asio::buffer ( data, length ) );
               }
             catch ( std::exception& e )
               {
-                buf.clear();
                 std::cerr << "Ooooops: " << e.what() << std::endl;
               }
 
