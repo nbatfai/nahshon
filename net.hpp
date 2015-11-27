@@ -136,12 +136,13 @@ public:
                 hasSession = false;
                 break;
               }
+              /*
             else if ( error )
               {
                 std::cerr << "read_some error: " << error << std::endl;
                 throw boost::system::system_error ( error );
               }
-
+*/
           }
       }
     catch ( std::exception& e )
