@@ -112,6 +112,9 @@ public:
       {
         for ( ;; )
           {
+	    // only for testing network latency
+	    //sleep(2);
+	    
             boost::system::error_code error;
             size_t length = client_socket_.read_some ( boost::asio::buffer ( data ), error );
 

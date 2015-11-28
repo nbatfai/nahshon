@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<book xmlns="http://docbook.org/ns/docbook" version="5.1" xml:lang="hu"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      xmlns:xi="http://www.w3.org/2001/XInclude">    
+    <info>
+        <title>Bátfai Samu</title>
+        <subtitle>Egy testetlen fejlődési robotikus ágens</subtitle>
+        <titleabbrev>SAMU</titleabbrev>
+        <author>
+            <personname>
+                <honorific>Dr.</honorific>
+                <surname>Bátfai</surname>
+                <firstname>Norbert</firstname>        
+            </personname>    
+            <affiliation>
+                <shortaffil>E. adjunktus, DEIK.</shortaffil>
+                <jobtitle>Egyetemi adjunktus</jobtitle>
+                <orgname>Debreceni Egyetem, Informatikai Kar</orgname>
+                <orgdiv>Információtechnológiai Tanszék</orgdiv>
+                <address>
+                    <email>batfai.norbert@inf.unideb.hu</email>
+                    <email>nbatfai@gmail.com</email>
+                </address>
+            </affiliation>
+            <address>
+                <street>Kassai út 26.</street>
+                <city>Debrecen</city>
+                <postcode>4028</postcode>
+                <country>Magyarország</country>
+                <email>batfai.norbert@inf.unideb.hu</email>
+                <otheraddr>
+                    <link xlink:href="http://www.inf.unideb.hu/~nbatfai">http://www.inf.unideb.hu/~nbatfai</link>
+                </otheraddr>
+            </address>
+        </author>
+        <edition>SAMU, v. Nahshon.0.0.1</edition>
+        <pubdate>2015</pubdate>
+        <copyright>
+            <year>2015</year>
+            <holder>Dr. Bátfai Norbert</holder>
+        </copyright>
+        <legalnotice>
+            <para>Samu Bátfai
+            </para>
+            <para>                
+                Copyright (C) 2014, Norbert Bátfai. Ph.D., batfai.norbert@inf.unideb.hu
+            </para>
+            <para>
+                This program is free software: you can redistribute it and/or modify
+                it under the terms of the GNU General Public License as published by
+                the Free Software Foundation, either version 3 of the License, or
+                (at your option) any later version.
+            </para>
+            <para>
+                This program is distributed in the hope that it will be useful,
+                but WITHOUT ANY WARRANTY; without even the implied warranty of
+                MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+                GNU General Public License for more details.
+            </para>
+            <para>
+                You should have received a copy of the GNU General Public License
+                along with this program.  If not, see 
+                <link xlink:href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</link>.
+            </para>
+            <para>
+                Ez a program szabad szoftver; terjeszthető illetve módosítható a 
+                Free Software Foundation által kiadott GNU General Public License
+                dokumentumában leírtak; akár a licenc 3-as, akár (tetszőleges) későbbi 
+                változata szerint.
+            </para>
+            <para>
+                Ez a program abban a reményben kerül közreadásra, hogy hasznos lesz, 
+                de minden egyéb GARANCIA NÉLKÜL, az ELADHATÓSÁGRA vagy VALAMELY CÉLRA 
+                VALÓ ALKALMAZHATÓSÁGRA való származtatott garanciát is beleértve. 
+                További részleteket a GNU General Public License tartalmaz.
+            </para>
+            <para>
+                A felhasználónak a programmal együtt meg kell kapnia a GNU General 
+                Public License egy példányát; ha mégsem kapta meg, akkor
+                tekintse meg a
+                <link xlink:href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</link>
+                oldalon.
+            </para>
+            <para>
+                <link xlink:href="http://gnu.hu/gplv3.html">http://gnu.hu/gplv3.html</link>                
+            </para>
+        </legalnotice>            
+        <revhistory>
+            <revision>
+                <revnumber>Nahshon.0.0.1</revnumber>
+                <date>2015-11-28</date>
+                <revremark>Initial document release for comment.</revremark>
+            </revision>
+        </revhistory>
+    </info>   
+    <xi:include href="samu-glssry-SRS-hu.xml">
+        <xi:fallback>
+            <para>
+                <emphasis>XInclude: samu-glssry-SRS-hu.xml file not found</emphasis>
+            </para>
+        </xi:fallback>
+    </xi:include>             
+    <chapter>
+        <info>
+            <title>Bevezetés</title>
+            <keywordset>
+                <keyword>Developmental Robotics</keyword>
+                <keyword>developmental robotic</keyword>
+                <keyword>Samu</keyword>
+                <keyword>Deep Q-learning</keyword>
+            </keywordset>
+        </info>
+        <section>
+            <title>Bátfai Samu</title>
+            <para>
+                Samu egy kutatási kezdeményezés egy olyan testetlen fejlődési robotikus (developmental robotic) ágens
+                létrehozására, amely az emberrel összemérhető képességű csevegő robotok létrehozásának alapjául szolgálhat. 
+            </para>
+            <para>
+                A családnév szerepeltetése Samu fejlődési robotikus jellegének ad hangsúlyt, mivel elsősorban családi
+                körben lesz nevelendő! 
+            </para>
+            <para>
+                A jelen pillanatig számos eldobható prototípust fejlesztettünk Samu teszteléséhez, ezek a következők:
+                <itemizedlist>
+                    <listitem>
+                        <para>
+                            Samu, <link xlink:href="https://github.com/nbatfai/samu">https://github.com/nbatfai/samu</link>
+                        </para>
+                    </listitem>                
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>A fejlesztendő rendszer áttekintő leírása</title>
+            <para>
+                Samu szoftvere alapvetően egy csevegőprogram, amely lehetőséget ad különböző gépi tanulásos
+                algoritmusok kipróbálására. Samu szülei (gondozói) az a szűk családi kör, amelyben a robot fejlesztése
+                történik. A gondozók tipikusan a konzolon keresztül érintkeznek a programmal. Az egyéb felhasználók
+                hálózaton keresztül tudnak a csevegésbe bekapcsolódni. Fontos további szempont hogy adott Samu ágensek 
+                tudásukat képesek legyenek egymással hálózaton keresztül megosztani, azaz kvázi egymást tanítani. Illetve 
+                Samu tudjon magában is beszélni. Samu programja legyen képes állandóan futni, ha nincs sem kozolos, sem hálózati 
+                aktivitás akkor megfelelő korpuszok olvasásával tanítsa magát, illetve önmagával folytasson dialógust!
+            </para>
+        </section>
+    </chapter>        
+    <chapter>
+        <info>
+            <title>Samu tervezése</title>
+            <keywordset>
+                <keyword></keyword>
+            </keywordset>
+        </info>
+        <section>
+            <title>Samu áttekintő leírása</title>   
+            <para>        
+                Az előző fejezet rövid szöveges áttekintő leírása alapján elkészítjük 
+            </para>                                                       
+        </section>         
+        
+        <section>
+            <title>Követelmények</title>   
+            <para> 
+                TODO
+            </para>
+            <section>
+                <title>Funkcionális követelmények</title>   
+                <para> 
+                    TODO
+                </para>            
+                <itemizedlist>
+                    <listitem>
+                        <para>
+                            A Samut családi körben elérő gondozók (logikailag) külön csatornákat tudjanak
+                            használni, hogy Samu meg tudja különböztetni őket. A családi kör kitüntetett 
+                            gondozójától Samu fenntartások nélkül tanuljon, azaz korlátlan bizalommal legyen
+                            a szülő felé, tehát a szülői bemenetet tekintse igaznak. Legalábbis fiatal korában, 
+                            ahogyan a humán gyerekekre is ez igaz.  
+                        </para>
+                    </listitem>  
+                    <listitem>
+                        <para>
+                            A Samut felkereső internetes csevegőktől Samu ne, vagy csak nagyon korlátozott 
+                            mértékben tanuljon.
+                        </para>
+                    </listitem>                      
+                    <listitem>
+                        <para>
+                            A szülő által megadott más kitüntetett Samu programoktól tanulhasson olyan
+                            tulajdonságokkal mintha a gondozóktól tanulna.                            
+                        </para>
+                    </listitem>                                          
+                    <listitem>
+                        <para>
+                            Samu programja soha ne álljon le, ha mégis, akkor mentse el állapotát (ez a lementett
+                            állapot Samu lelke, maga a futó Samu folyamat a teste) és legközelebb ebből
+                            az elmentett állapotból induljon el.
+                        </para>
+                    </listitem>  
+                    <listitem>
+                        <para>
+                            TODO                            
+                        </para>
+                    </listitem>                        
+                </itemizedlist>                
+            </section>            
+            <section>
+                <title>Nem funkcionális követelmények</title>   
+                <para>
+                    TODO 
+                </para>        
+                <itemizedlist>
+                    <listitem>
+                        <para>
+                            Samu programja támogassa a különböző gépi tanulásos algoritmusok kipróbálhatóságát.
+                        </para>
+                    </listitem>                
+                    <listitem>
+                        <para>
+                            A különböző algoritmusokkal való kutatást/tesztelést egyfajta külső vezérlésnek tekinthetjük.
+                            Ez például akkor szembetűnő, ha összehasonlítjuk a prototípusok terminálon vagy hálózaton jött
+                            bemeneteinek feldolgozását az ezek hiányában beinduló korpuszok olvasásával. Mivel az előbbi 
+                            kettő a Samu osztályban van implementálva, utóbbi a main függvényben. E külső vezérlés mellé, vagy
+                            méginkább e helyett vezessnk be egyfajta belső vezérlést, ahol Samu dönti el, hogy éppen
+                            mit csináljon.  
+                        </para>
+                    </listitem>                                
+                    <listitem>
+                        <para>
+                            Samu minden kommunikációt mint korpuszokat mentsen le.
+                        </para>
+                    </listitem>                                    
+                    <listitem>
+                        <para>
+                            Samu egyszerre egy beszélgetést tudjon folytatni (szemben azzal a távolabbi céllal, amikor a 
+                            beszélgetéseket processzeknek feleltetjük meg és Samu egyfajta olyan operációs rendszer jellegű
+                            alakot öltsön, aki időosztással tud több beszélgetést szimultán kezelni.)
+                        </para>
+                    </listitem>                                
+                    <listitem>
+                        <para>
+                            Samu legyen open source alapú, lehetőleg GNU GPL v3. A dokumentálás nyelve DocBook XML 5.1 szabvány.
+                        </para>
+                    </listitem>                                                    
+                    <listitem>
+                        <para>
+                            Samu tanító korpuszai legyenek open source alapú korpuszok.
+                        </para>
+                    </listitem>                                                                        
+                </itemizedlist>                                                                  
+            </section>   
+            <section>
+                <title>Felhasználói követelmények</title>   
+                <para> 
+                    TODO
+                </para>            
+                <itemizedlist>
+                    <listitem>
+                        <para>
+                            A Samut családi körben elérő gondozók meg tudják szakítani Samu tanulását 
+                            vagy hálózati kommunikációját, tehát élvezzen prioritást a terminálon keresztüli
+                            elérés.  
+                        </para>
+                    </listitem>  
+                </itemizedlist>
+            </section>   
+            <section>
+                <title>Interfészek</title>   
+                <para>
+                    TODO 
+                </para>        
+                <para>
+                    Samu lelke sima szöveges állomány legyen, bz2-vel tömörítve.  
+                </para>        
+            </section>                        
+        </section>                
+        <section>
+            <title>Összefoglalás</title>   
+            <para> 
+                TODO
+            </para>
+        </section>        
+    </chapter>
+</book>
