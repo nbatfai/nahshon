@@ -33,14 +33,14 @@
                 </otheraddr>
             </address>
         </author>
-        <edition>SAMU, v. Nahshon.0.0.1</edition>
+        <edition>SAMU SRS, v. Nahshon.0.0.1</edition>
         <pubdate>2015</pubdate>
         <copyright>
             <year>2015</year>
             <holder>Dr. Bátfai Norbert</holder>
         </copyright>
         <legalnotice>
-            <para>Samu Bátfai
+            <para>Samu Bátfai, Software Requirements Specification
             </para>
             <para>                
                 Copyright (C) 2014, Norbert Bátfai. Ph.D., batfai.norbert@inf.unideb.hu
@@ -135,18 +135,21 @@
             <title>A fejlesztendő rendszer áttekintő leírása</title>
             <para>
                 Samu szoftvere alapvetően egy csevegőprogram, amely lehetőséget ad különböző gépi tanulásos
-                algoritmusok kipróbálására. Samu szülei (gondozói) az a szűk családi kör, amelyben a robot fejlesztése
+                algoritmusok kipróbálására, tsztelésére, fejlesztésére. Samu szülei (gondozói) az a szűk családi kör, 
+                amelyben a robot fejlesztése
                 történik. A gondozók tipikusan a konzolon keresztül érintkeznek a programmal. Az egyéb felhasználók
                 hálózaton keresztül tudnak a csevegésbe bekapcsolódni. Fontos további szempont hogy adott Samu ágensek 
                 tudásukat képesek legyenek egymással hálózaton keresztül megosztani, azaz kvázi egymást tanítani. Illetve 
                 Samu tudjon magában is beszélni. Samu programja legyen képes állandóan futni, ha nincs sem kozolos, sem hálózati 
                 aktivitás akkor megfelelő korpuszok olvasásával tanítsa magát, illetve önmagával folytasson dialógust!
+                További fontos aspektus, hogy Samu egyben egy kutatási projekt is, ennek megfelelően a kapcsolódó kutatásokat
+                is támogatnia kell a fejlesztendő rendszernek.
             </para>
         </section>
     </chapter>        
     <chapter>
         <info>
-            <title>Samu tervezése</title>
+            <title>Samu szoftverkövetelményei</title>
             <keywordset>
                 <keyword></keyword>
             </keywordset>
@@ -265,6 +268,19 @@
                 </itemizedlist>
             </section>   
             <section>
+                <title>Rendszerkövetelmények</title>   
+                <para> 
+                    TODO
+                </para>            
+                <itemizedlist>
+                    <listitem>
+                        <para>
+                            
+                        </para>
+                    </listitem>  
+                </itemizedlist>
+            </section>   
+            <section>
                 <title>Interfészek</title>   
                 <para>
                     TODO 
@@ -281,4 +297,30 @@
             </para>
         </section>        
     </chapter>
+    <chapter>
+        <info>
+            <title>Rendszermodellek</title>
+            <keywordset>
+                <keyword></keyword>
+            </keywordset>
+        </info>
+        <section>
+            <title></title>
+            <para>
+            </para>
+        </section>
+    </chapter>    
+    <chapter>
+        <info>
+            <title>Rendszer-evolúció</title>
+            <keywordset>
+                <keyword></keyword>
+            </keywordset>
+        </info>
+        <section>
+            <title></title>
+            <para>
+            </para>
+        </section>
+    </chapter>    
 </book>
