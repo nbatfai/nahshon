@@ -320,13 +320,23 @@
                 <para> 
                     TODO
                 </para>            
-                <itemizedlist>
-                    <listitem>
-                        <para>
-                            
-                        </para>
-                    </listitem>  
-                </itemizedlist>
+                <section>
+                    <title>Használati esetek</title>   
+                    <para> 
+                        TODO
+                        <figure>
+                            <title>Samu használati esetei</title>
+                            <mediaobject>
+                                <imageobject>
+                                    <imagedata fileref="img/uc1.png" scale="55" />
+                                </imageobject>
+                                <textobject>
+                                    <phrase>Samu használati esetei.</phrase>
+                                </textobject>
+                            </mediaobject>
+                        </figure>                            
+                    </para>            
+                </section>
             </section>   
             <section>
                 <title>Interfészek</title>   
