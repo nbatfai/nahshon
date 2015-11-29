@@ -312,6 +312,19 @@
                     bemutatott módon valósítja meg, ezt foglalja össze a következő, az UML aktivitás diagramjainak jelöléseit
                     használó ábra. 
                 </para>            
+                <para>
+                        <figure>
+                            <title>Samu Q-tanulása</title>
+                            <mediaobject>
+                                <imageobject>
+                                    <imagedata fileref="img/a1.png" scale="55" />
+                                </imageobject>
+                                <textobject>
+                                    <phrase>Samu Q-tanulása.</phrase>
+                                </textobject>
+                            </mediaobject>
+                        </figure>                                                
+                </para>
             </section>
             <section>
                 <title>Felhasználói követelmények</title>   
