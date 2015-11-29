@@ -350,6 +350,20 @@
                             </mediaobject>
                         </figure>                            
                     </para>            
+                    <para> 
+                        TODO
+                        <figure>
+                            <title>A tanulás</title>
+                            <mediaobject>
+                                <imageobject>
+                                    <imagedata fileref="img/uc3.png" scale="55" />
+                                </imageobject>
+                                <textobject>
+                                    <phrase>A tanulás.</phrase>
+                                </textobject>
+                            </mediaobject>
+                        </figure>                            
+                    </para>            
                 </section>
             </section>   
             <section>
