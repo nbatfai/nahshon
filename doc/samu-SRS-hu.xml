@@ -40,7 +40,7 @@
             <holder>Dr. Bátfai Norbert</holder>
         </copyright>
         <legalnotice>
-            <para>Samu Bátfai, Software Requirements Specification
+            <para>Samu Bátfai (Nahshon) Software Requirements Specification
             </para>
             <para>                
                 Copyright (C) 2014, Norbert Bátfai. Ph.D., batfai.norbert@inf.unideb.hu
@@ -126,6 +126,51 @@
                     <listitem>
                         <para>
                             Samu, <link xlink:href="https://github.com/nbatfai/samu">https://github.com/nbatfai/samu</link>
+                        </para>
+                    </listitem>                
+                    <listitem>
+                        <para>
+                            Isaac, <link xlink:href="https://github.com/nbatfai/isaac">https://github.com/nbatfai/isaac</link>
+                        </para>
+                    </listitem>                
+                    <listitem>
+                        <para>
+                            Jacob, <link xlink:href="https://github.com/nbatfai/jacob">https://github.com/nbatfai/jacob</link>
+                        </para>
+                    </listitem>                
+                    <listitem>
+                        <para>
+                            Judah, <link xlink:href="https://github.com/nbatfai/judah">https://github.com/nbatfai/judah</link>
+                        </para>
+                    </listitem>                
+                    <listitem>
+                        <para>
+                            Super-Judah, <link xlink:href="https://github.com/nbatfai/super-judah">https://github.com/nbatfai/super-judah</link>
+                        </para>
+                    </listitem>                
+                    <listitem>
+                        <para>
+                            Hezron, <link xlink:href="https://github.com/nbatfai/hezron">https://github.com/nbatfai/hezron</link>
+                        </para>
+                    </listitem>                
+                    <listitem>
+                        <para>
+                            Ram, <link xlink:href="https://github.com/nbatfai/ram">https://github.com/nbatfai/ram</link>
+                        </para>
+                    </listitem>                
+                    <listitem>
+                        <para>
+                            Amminadab, <link xlink:href="https://github.com/nbatfai/samu">https://github.com/nbatfai/amminadab</link>
+                        </para>
+                    </listitem>                
+                    <listitem>
+                        <para>
+                            Nahshon, <link xlink:href="https://github.com/nbatfai/nahshon">https://github.com/nbatfai/nahshon</link>
+                        </para>
+                    </listitem>                
+                    <listitem>
+                        <para>
+                            Salmon, <link xlink:href="https://github.com/nbatfai">https://github.com/nbatfai/</link>
                         </para>
                     </listitem>                
                 </itemizedlist>

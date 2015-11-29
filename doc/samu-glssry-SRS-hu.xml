@@ -24,6 +24,13 @@
                 <para>TODO</para>
             </glossdef>
         </glossentry>
+        <glossentry xml:id="deepq">
+            <glossterm>Deep Q-Learning</glossterm>
+            <abbrev>DeepQ</abbrev>
+            <glossdef>
+                <para>TODO</para>
+            </glossdef>
+        </glossentry>
     </glossdiv>
     <glossdiv>
         <title>U</title>
@@ -31,9 +38,10 @@
             <glossterm>The Yearbook of the Programmers of University of Debrecen</glossterm>
             <abbrev>UDPROG</abbrev>
             <glossdef>
-                <para>A Debreceni Egyetem <link xlink:href="http://progpater.blog.hu/2014/05/31/ez_a_prog1_mi_lesz_a">reguláris programozás oktatásához</link> kapcsolódó,
-                    Linkedin-en szervezett
-                    <link xlink:href="https://www.linkedin.com/groups/Yearbook-Programmers-University-Debrecen-7446358?homeNewMember=&amp;gid=7446358&amp;fromEmail=&amp;ut=2mVSHNO5Dwwm41&amp;trk=eml-grp-sub">fejlesztői közösség</link>,
+                <para>A Debreceni Egyetem 
+                    <link xlink:href="http://progpater.blog.hu/2014/05/31/ez_a_prog1_mi_lesz_a">reguláris programozás oktatásához</link> kapcsolódó,
+                    Facebook-en szervezett
+                    <link xlink:href="https://www.facebook.com/groups/udprog/">fejlesztői közösség</link>,
                     melynek egyik gyújtópontjában <link xlink:href="http://sourceforge.net/p/udprog/code/ci/master/tree/">szoftverek</link>,
                     a másikban maga az
                     <link xlink:href="http://sourceforge.net/projects/udprog/files/?source=navbar">évkönyv</link> áll.
