@@ -117,6 +117,9 @@
                 létrehozására, amely az emberrel összemérhető képességű csevegő robotok létrehozásának alapjául szolgálhat. 
             </para>
             <para>
+                Az aktuális kutatási eredményeket a <citation>SAMU</citation> kézirat mutatja be.
+            </para>
+            <para>
                 A családnév szerepeltetése Samu fejlődési robotikus jellegének ad hangsúlyt, mivel elsősorban családi
                 körben lesz nevelendő! 
             </para>
@@ -368,4 +371,46 @@
             </para>
         </section>
     </chapter>    
+    <bibliography>
+        <title>Irodalomjegyzék</title>
+        <bibliodiv>
+            <title>Kutatási cikkek</title>
+            <biblioentry>
+                <abbrev>SAMU</abbrev>
+                <authorgroup>
+                    <author>
+                        <personname>
+                            <surname>Bátfai</surname>
+                            <firstname>Norbert</firstname>        
+                        </personname>    
+                    </author>
+                </authorgroup>
+                <title>A disembodied developmental robotic agent called Samu Bátfai</title>
+                <publisher>
+                    <publishername>
+                        <link xlink:href="http://arxiv.org/abs/1511.02889">http://arxiv.org/abs/1511.02889</link>
+                    </publishername>
+                </publisher>
+                <pubdate>2015</pubdate>
+            </biblioentry> 
+            <biblioentry>
+                <abbrev>COP</abbrev>
+                <authorgroup>
+                    <author>
+                        <personname>
+                            <surname>Bátfai</surname>
+                            <firstname>Norbert</firstname>        
+                        </personname>    
+                    </author>
+                </authorgroup>
+                <title>Conscious Machines and Consciousness Oriented Programming</title>
+                <publisher>
+                    <publishername>
+                        <link xlink:href="http://arxiv.org/abs/1108.2865">http://arxiv.org/abs/1108.2865</link>
+                    </publishername>
+                </publisher>
+                <pubdate>2011</pubdate>
+            </biblioentry>                        
+        </bibliodiv>
+    </bibliography>    
 </book>
