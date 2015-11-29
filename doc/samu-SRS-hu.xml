@@ -203,21 +203,25 @@
             </keywordset>
         </info>
         <section>
-            <title>Samu áttekintő leírása</title>   
+            <title>Samu áttekintése</title>   
             <para>        
-                Az előző fejezet rövid szöveges áttekintő leírása alapján elkészítjük 
+                Az előző fejezet rövid szöveges áttekintő leírása alapján elkészítünk egy az UML komponens
+                diagramok jelöléseit használó magyarázó ábrát. 
             </para>                                                       
         </section>         
         
         <section>
             <title>Követelmények</title>   
             <para> 
-                TODO
+                A szokásos funkcionális és nem funkcionális követelményeken túl Samu esetén meg kell
+                fogalmaznunk fontos szakterületi követelményeket is, hiszen a fejlesztés mögött a 
+                mély Q-tanulás alkalmazása és kutatása áll. A szakterületi követelmények után
+                a tervezési folyamatot a rendszerkövetelmények áttekintésével segítjük.
             </para>
             <section>
                 <title>Funkcionális követelmények</title>   
                 <para> 
-                    TODO
+                    Samu alapvető működésével kapcsolatban az alábbi alapvető követelményeket fektetjük le.
                 </para>            
                 <itemizedlist>
                     <listitem>
@@ -258,7 +262,7 @@
             <section>
                 <title>Nem funkcionális követelmények</title>   
                 <para>
-                    TODO 
+                    Samuval mint a fejlesztendő rendszerrel általában az alábbi alapvető követelményeket fektetjük le.
                 </para>        
                 <itemizedlist>
                     <listitem>
@@ -301,11 +305,32 @@
                 </itemizedlist>                                                                  
             </section>   
             <section>
+                <title>Szakterületi követelmények</title>   
+                <para> 
+                    A Samu tanulásában alapvető Q-tanuláshoz szükséges a megerősítéses tanulás alapjának, azaz a 
+                    jutalomnak és a büntetésnek a biztosítása. Ezt Samu a <citation>SAMU</citation> kéziratban
+                    bemutatott módon valósítja meg, ezt foglalja össze a következő, az UML aktivitás diagramjainak jelöléseit
+                    használó ábra. 
+                </para>            
+            </section>
+            <section>
                 <title>Felhasználói követelmények</title>   
                 <para> 
                     TODO
                 </para>            
                 <itemizedlist>
+                    <listitem>
+                        <para>
+                            A csevegő felhasználók Samuból a szokásos csevegő programok megszokott felületét lássák.  
+                        </para>
+                    </listitem>                      
+                    <listitem>
+                        <para>
+                            A csevegőknek legyen lehetőségük hitelesíteni magukat és így az azonosított
+                            felhasználók egyrészt nagyobb hatást tudjanak gyakorolni Samu tanulási folyamataira, 
+                            másrészt róluk Samu legyen képes információkat tárolni, így emlékezni rájuk. 
+                        </para>
+                    </listitem>                                          
                     <listitem>
                         <para>
                             A Samut családi körben elérő gondozók meg tudják szakítani Samu tanulását 
