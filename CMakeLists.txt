@@ -127,14 +127,22 @@ link_directories( ${Boost_LIBRARY_DIRS} )
 include(FindPNGwriter.cmake)
 
 if(PNGwriter_FOUND)
-  include_directories(SYSTEM ${PNGwriter_INCLUDE_DIRS})
-  add_definitions(${PNGwriter_DEFINITIONS})
-  set(LIBS ${LIBS} ${PNGwriter_LIBRARIES})
+    include_directories(SYSTEM ${PNGwriter_INCLUDE_DIRS})
+    add_definitions(${PNGwriter_DEFINITIONS})
+    set(LIBS ${LIBS} ${PNGwriter_LIBRARIES})
 endif(PNGwriter_FOUND)
 
 include(FindLinkGrammar.cmake)
 
 include_directories(${LINK_GRAMMAR_INCLUDE_DIRS})
+
+find_package(Doxygen)
+if(DOXYGEN_FOUND)
+    configure_file(${CMAKE_CURRENT_SOURCE_DIR}/Doxyfile ${CMAKE_CURRENT_BINARY_DIR}/doxydoc/htm/index.html)
+    add_custom_target(doc ${DOXYGEN_EXECUTABLE} ${CMAKE_CURRENT_BINARY_DIR}/doxydoc/htm/index.html
+    WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}
+    VERBATIM)
+endif(DOXYGEN_FOUND)
 
 if (CUDA_FOUND)
   cuda_compile(CUDASRCS qlc.cu)
