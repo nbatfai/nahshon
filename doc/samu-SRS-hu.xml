@@ -302,6 +302,16 @@
                             Samu tanító korpuszai legyenek open source alapú korpuszok.
                         </para>
                     </listitem>                                                                        
+                    <listitem>
+                        <para>
+                            Samu fusson UNIX-típusú rendszereken, például 
+                            <indexterm>
+                                <primary>GNU</primary> 
+                                <secondary>Linux</secondary>
+                                <see>Linux</see>
+                            </indexterm>GNU/Linux rendszereken.
+                        </para>
+                    </listitem>                                                                        
                 </itemizedlist>                                                                  
             </section>   
             <section>
