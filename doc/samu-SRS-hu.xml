@@ -308,7 +308,7 @@
                 <title>Szakterületi követelmények</title>   
                 <section>
                     <title>Q-tanulás</title>                   
-                    <para> 
+                    <para xml:id="samu_alg_activity"> 
                         A Samu tanulásában alapvető Q-tanuláshoz szükséges a megerősítéses tanulás alapjának, azaz a 
                         jutalomnak és a büntetésnek a biztosítása. Ezt Samu a <citation>SAMU</citation> kéziratban
                         bemutatott módon valósítja meg, ezt foglalja össze a következő, az UML aktivitás diagramjainak jelöléseit
@@ -428,7 +428,7 @@
                     </para>            
                     <para> 
                         Ugyanakkor a tanítás mindig üzenetfogadással és a megerősítéses tanulás alkalmazásával jár,
-                        a 
+                        a korábban vázolt <link xlink:href="#samu_alg_activity">tanulási algoritmusnak</link> megfelelően.
                     </para>                        
                     <para> 
                         <figure>
