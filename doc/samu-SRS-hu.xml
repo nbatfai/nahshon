@@ -306,13 +306,15 @@
             </section>   
             <section>
                 <title>Szakterületi követelmények</title>   
-                <para> 
-                    A Samu tanulásában alapvető Q-tanuláshoz szükséges a megerősítéses tanulás alapjának, azaz a 
-                    jutalomnak és a büntetésnek a biztosítása. Ezt Samu a <citation>SAMU</citation> kéziratban
-                    bemutatott módon valósítja meg, ezt foglalja össze a következő, az UML aktivitás diagramjainak jelöléseit
-                    használó ábra. 
-                </para>            
-                <para>
+                <section>
+                    <title>Q-tanulás</title>                   
+                    <para> 
+                        A Samu tanulásában alapvető Q-tanuláshoz szükséges a megerősítéses tanulás alapjának, azaz a 
+                        jutalomnak és a büntetésnek a biztosítása. Ezt Samu a <citation>SAMU</citation> kéziratban
+                        bemutatott módon valósítja meg, ezt foglalja össze a következő, az UML aktivitás diagramjainak jelöléseit
+                        használó ábra. 
+                    </para>            
+                    <para>
                         <figure>
                             <title>Samu Q-tanulása</title>
                             <mediaobject>
@@ -324,12 +326,22 @@
                                 </textobject>
                             </mediaobject>
                         </figure>                                                
-                </para>
+                    </para>
+                </section>
+                <section>
+                    <title>A kutatási feladatok aspektus-orientált megfogalmazása</title>               
+                    <para> 
+                        A fejlesztendő rendszer egyik alapfeladata a kapcsolódó kutatás támogatása, az eddigi 
+                        gyors protókat felhasználó kutatási tapasztalat azt sugallja, hogy a kutatás támogatását
+                        Samuba célszerű az aspektusorientál paradigma mentén átszövő vonatkozások formájában
+                        megvalósítani. 
+                    </para>     
+                </section>                       
             </section>
             <section>
                 <title>Felhasználói követelmények</title>   
                 <para> 
-                    TODO
+                    A felhasználók felé Samu programja klasszikus cseegőprogramként jelenik meg.
                 </para>            
                 <itemizedlist>
                     <listitem>
@@ -339,11 +351,22 @@
                     </listitem>                      
                     <listitem>
                         <para>
+                            Samu be tudjon kapcsolódni internetes csevegőkbe. Ennek megfelelően ne csak 1:1, hanem
+                            1:N résztvevős beszélgetéseket is tudjon kezelni.  
+                        </para>
+                    </listitem>                      
+                    <listitem>
+                        <para>
                             A csevegőknek legyen lehetőségük hitelesíteni magukat és így az azonosított
                             felhasználók egyrészt nagyobb hatást tudjanak gyakorolni Samu tanulási folyamataira, 
                             másrészt róluk Samu legyen képes információkat tárolni, így emlékezni rájuk. 
                         </para>
                     </listitem>                                          
+                    <listitem>
+                        <para>
+                            A gondozó felhasználók tudják tanítani Samut.  
+                        </para>
+                    </listitem>                      
                     <listitem>
                         <para>
                             A Samut családi körben elérő gondozók meg tudják szakítani Samu tanulását 
@@ -356,12 +379,24 @@
             <section>
                 <title>Rendszerkövetelmények</title>   
                 <para> 
-                    TODO
-                </para>            
+                    A követelmények feltárását az UML használati eset diagramjainak jelöléseivel készített
+                    ábrákkal segítjük.
+                </para>
                 <section>
                     <title>Használati esetek</title>   
                     <para> 
-                        TODO
+                        Azonosított vagy azonosítatlan felhasználó ugyanúgy lehet humán személy vagy 
+                        Samu-típusú csevegő robot. Az azonosítottakra emlékszik Samu és ők tudják őt tanítani,
+                        az azonosítatlanok csak csevegni tudnak Samuval. Ez a megkülönböztetés azt jelenti, hogy az
+                        azonosítatlan csevegés nem tanítja Samut.                         
+                    </para> 
+                    <para> 
+                        A kitüntetett gondozó felhasználó feladata Samu tanítása, amely alapja lehet egyoldalú
+                        beszélés Samuhoz, beszélgetés Samuval, vagy tanító korpuszok olvastatása Samuval.
+                        A kutató felhasználó speciális, Samunak olyan szolgáltatásokat kell felé nyújtania, amelyek
+                        Samu működését tudják monitorozni. 
+                    </para>
+                    <para>
                         <figure>
                             <title>Samu használati esetei</title>
                             <mediaobject>
@@ -375,7 +410,10 @@
                         </figure>                            
                     </para>            
                     <para> 
-                        TODO
+                        A tanítás tehát nem csupán beszélgetés a gondozókkal, illetve a csevegés sem jelent 
+                        szükségképpen minden bejövő mondatra választ.
+                    </para>                        
+                    <para> 
                         <figure>
                             <title>A beszélgetés és a tanulás kapcsolata</title>
                             <mediaobject>
@@ -389,7 +427,10 @@
                         </figure>                            
                     </para>            
                     <para> 
-                        TODO
+                        Ugyanakkor a tanítás mindig üzenetfogadással és a megerősítéses tanulás alkalmazásával jár,
+                        a 
+                    </para>                        
+                    <para> 
                         <figure>
                             <title>A tanulás</title>
                             <mediaobject>
@@ -403,7 +444,9 @@
                         </figure>                            
                     </para>            
                 </section>
+                
             </section>   
+        
             <section>
                 <title>Interfészek</title>   
                 <para>
