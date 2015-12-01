@@ -144,6 +144,12 @@ if(DOXYGEN_FOUND)
     VERBATIM)
 endif(DOXYGEN_FOUND)
 
+add_custom_target(
+    srs
+    COMMAND make
+    WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/doc
+)
+
 if (CUDA_FOUND)
   cuda_compile(CUDASRCS qlc.cu)
   cuda_add_executable(samu ${CUDASRCS} disp.hpp net.hpp nlp.hpp nlp.cpp qlc.h ql.hpp samu.hpp samu.cpp main.cpp )

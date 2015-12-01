@@ -28,5 +28,6 @@ validate_xmllint_samu:
 
 .PHONY: clean
 clean:
-	rm -vf samu-SRS-hu.pdf samu-SRS-hu.epub
+	rm -f samu-SRS-hu.pdf samu-SRS-hu.epub
+	rm -f *~
 
