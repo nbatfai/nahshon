@@ -31,6 +31,19 @@
                 <para>TODO</para>
             </glossdef>
         </glossentry>
+        <glossentry xml:id="docbook">
+            <glossterm>DocBook XML</glossterm>
+            <abbrev>DB</abbrev>
+            <glossdef>
+                <para>A <indexterm>
+                    <primary>DocBook</primary> 
+                    <secondary>XML</secondary>
+                </indexterm>
+                <link xlink:href="http://docbook.org/tdg51/en/html/">DocBook</link> 
+                elsősorban az informatikai tárgyú írásos dokumentumok készítésére és annotálására kifejlesztett 
+                modern, szabványos jelölőnyelv.</para>
+            </glossdef>
+        </glossentry>
     </glossdiv>
     <glossdiv>
         <title>U</title>
