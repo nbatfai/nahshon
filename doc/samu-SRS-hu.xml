@@ -124,7 +124,7 @@
                 körben lesz nevelendő! 
             </para>
             <para>
-                A jelen pillanatig számos eldobható prototípust fejlesztettünk Samu teszteléséhez, ezek a következők:
+                A jelen pillanatig számos eldobható gyors prototípust fejlesztettünk Samu teszteléséhez, ezek a következők:
                 <itemizedlist>
                     <listitem>
                         <para>
@@ -482,9 +482,22 @@
             </keywordset>
         </info>
         <section>
-            <title></title>
+            <title>Samu viselkedése madártávlatból</title>
             <para>
             </para>
+                    <para> 
+                        <figure>
+                            <title>Samu állapotdiagramja</title>
+                            <mediaobject>
+                                <imageobject>
+                                    <imagedata fileref="img/sm1.png" scale="55" />
+                                </imageobject>
+                                <textobject>
+                                    <phrase>Samu állapotdiagramja.</phrase>
+                                </textobject>
+                            </mediaobject>
+                        </figure>                            
+                    </para>            
         </section>
     </chapter>    
     <chapter>

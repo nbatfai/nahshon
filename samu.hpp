@@ -80,8 +80,25 @@
 #include <cctype>
 #include <cmath>
 
+/**
+ * @brief This enum represents the communication states of Samu.
+ *
+ * aaa
+ *
+ * @author Norbert Bátfai
+ * @date Dec. 1, 2015
+ */
 enum SamuState {SLEEP, TERMINAL, NETWORK};
 
+
+/**
+ * @brief This class represents the Nahshon version of Samu.
+ *
+ * aaa
+ *
+ * @author Norbert Bátfai
+ * @date Dec. 1, 2015
+ */
 class Samu
 {
 public:
