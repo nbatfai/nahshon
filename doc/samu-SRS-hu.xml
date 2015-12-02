@@ -487,82 +487,108 @@
             </keywordset>
         </info>
         <section>
-            <title>Samu viselkedése madártávlatból</title>
+            <title>Rendszer-specifikáció</title>
+            <para>
+                Jó gyakorlat a rendszerkövetelmények elemzésére az eldobható gyors
+                prototípusok grafikus modelljeinek elkészítése. Ezek számos esetben (például az osztálymodell
+                esetén osztálydiagramok formájában) automatikusan, reverse engineering jelleggel és egyben az agilis
+                szemlélettel összhangban magukból az eldobható gyors prototípusok forráskódjaiból is generálhatóak.
+            </para>
+            <section>
+                <title>Samu viselkedése madártávlatból</title>
+                <para>
+                </para>
+                <para> 
+                    <figure>
+                        <title>Samu állapotdiagramja</title>
+                        <mediaobject>
+                            <imageobject>
+                                <imagedata fileref="img/sm1.png" scale="55" />
+                            </imageobject>
+                            <textobject>
+                                <phrase>Samu állapotdiagramja.</phrase>
+                            </textobject>
+                        </mediaobject>
+                    </figure>                            
+                </para>                                
+                <para>
+                    <table frame="all">
+                        <title>Az állapotok leírása</title>
+                        <tgroup cols="2">
+                            <thead>
+                                <row>
+                                    <entry>Állapot</entry>
+                                    <entry>Leírás</entry>
+                                </row>
+                            </thead>
+                            <tbody> 
+                                <row>  
+                                    <entry>Várakozás</entry> 
+                                    <entry>Samu várakozik a konzolról vagy a hálózatról érkező bejövő üzenetre (egy mondatra).</entry> 
+                                </row>
+                                <row>  
+                                    <entry>Olvasás</entry> 
+                                    <entry>Samu az előkészített tanító korpuszokat olvassa (annak egy mondatát), 
+                                        azaz tanul ezekből a korpuszokból.</entry> 
+                                </row>
+                                <row>  
+                                    <entry>Q-tanulás</entry> 
+                                    <entry>Samu a kapott mondattal végrehajtja a részben korábban már vázolt 
+                                        <link xlink:href="#samu_alg_activity">tanulási algoritmusát</link>.</entry> 
+                                </row>
+                            </tbody>
+                        </tgroup>      
+                    </table>   
+                    <table frame="all">
+                        <title>Az állapotátmenetek leírása</title>
+                        <tgroup cols="2">
+                            <thead>
+                                <row>
+                                    <entry>Átmenet</entry>
+                                    <entry>Leírás</entry>
+                                </row>
+                            </thead>
+                            <tbody> 
+                                <row>  
+                                    <entry>timeout</entry> 
+                                    <entry>A megadott időhatáron belül sem a konzolról, sem a hálózatról nem
+                                        érkezett üzenet.</entry> 
+                                </row>
+                                <row>  
+                                    <entry>üzenet</entry> 
+                                    <entry>Üzenet (egy mondat) érkezett vagy a gondozói konzolról, vagy a 
+                                        hálózatról.</entry> 
+                                </row>
+                                <row>  
+                                    <entry>válasz</entry> 
+                                    <entry>Samu a bejövő üzire válaszul visszhangozza a 
+                                        korábban már vázolt 
+                                        <link xlink:href="#samu_alg_activity">tanulási algoritmusának</link> kimenetét.</entry> 
+                                </row>
+                            </tbody>
+                        </tgroup>      
+                    </table>   
+                </para>
+            </section>    
+                    <section>
+            <title>Samu objektummodellje</title>
             <para>
             </para>
             <para> 
                 <figure>
-                    <title>Samu állapotdiagramja</title>
+                    <title>Samu osztálydiagramja</title>
                     <mediaobject>
                         <imageobject>
-                            <imagedata fileref="img/sm1.png" scale="55" />
+                            <imagedata fileref="img/cd1.png" scale="55" />
                         </imageobject>
                         <textobject>
-                            <phrase>Samu állapotdiagramja.</phrase>
+                            <phrase>Samu osztálydiagramja.</phrase>
                         </textobject>
                     </mediaobject>
                 </figure>                            
             </para>            
                     
-            <para>
-                <table frame="all">
-                    <title>Az állapotok leírása</title>
-                    <tgroup cols="2">
-                        <thead>
-                            <row>
-                                <entry>Állapot</entry>
-                                <entry>Leírás</entry>
-                            </row>
-                        </thead>
-                        <tbody> 
-                            <row>  
-                                <entry>Várakozás</entry> 
-                                <entry>Samu várakozik a konzolról vagy a hálózatról érkező bejövő üzenetre (egy mondatra).</entry> 
-                            </row>
-                            <row>  
-                                <entry>Olvasás</entry> 
-                                <entry>Samu az előkészített tanító korpuszokat olvassa (annak egy mondatát), 
-                                    azaz tanul ezekből a korpuszokból.</entry> 
-                            </row>
-                            <row>  
-                                <entry>Q-tanulás</entry> 
-                                <entry>Samu a kapott mondattal végrehajtja a részben korábban már vázolt 
-                                    <link xlink:href="#samu_alg_activity">tanulási algoritmusát</link>.</entry> 
-                            </row>
-                        </tbody>
-                    </tgroup>      
-                </table>   
-                <table frame="all">
-                    <title>Az állapotátmenetek leírása</title>
-                    <tgroup cols="2">
-                        <thead>
-                            <row>
-                                <entry>Átmenet</entry>
-                                <entry>Leírás</entry>
-                            </row>
-                        </thead>
-                        <tbody> 
-                            <row>  
-                                <entry>timeout</entry> 
-                                <entry>A megadott időhatáron belül sem a konzolról, sem a hálózatról nem
-                                    érkezett üzenet.</entry> 
-                            </row>
-                            <row>  
-                                <entry>üzenet</entry> 
-                                <entry>Üzenet (egy mondat) érkezett vagy a gondozói konzolról, vagy a 
-                                    hálózatról.</entry> 
-                            </row>
-                            <row>  
-                                <entry>válasz</entry> 
-                                <entry>Samu a bejövő üzire válaszul visszhangozza a 
-                                    korábban már vázolt 
-                                    <link xlink:href="#samu_alg_activity">tanulási algoritmusának</link> kimenetét.</entry> 
-                            </row>
-                        </tbody>
-                    </tgroup>      
-                </table>   
-            </para>
-                    
+                    </section>                
         </section>
     </chapter>    
     <chapter>
