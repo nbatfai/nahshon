@@ -3,8 +3,19 @@
               xmlns:xi="http://www.w3.org/2001/XInclude">
     <title>Szójegyzék</title>
     <glossdiv>
+        <title>C</title>
+        <glossentry xml:id="cuda_glssry">
+            <glossterm>CUDA</glossterm>
+            <abbrev>CUDA</abbrev>
+            <glossdef>
+                <para>
+                </para>
+            </glossdef>
+        </glossentry>
+    </glossdiv>    
+    <glossdiv>
         <title>I</title>
-        <glossentry xml:id="ieee1998">
+        <glossentry xml:id="ieee1998_glssry">
             <glossterm>IEEE Recommended Practice for Software Requirements Specifications</glossterm>
             <acronym>IEEE, 1998</acronym>
             <abbrev>IEEE Std 830-1998</abbrev>
@@ -17,21 +28,21 @@
     </glossdiv>
     <glossdiv>
         <title>D</title>
-        <glossentry xml:id="devrob">
+        <glossentry xml:id="devrob_glssry">
             <glossterm>Developmental Robotics</glossterm>
             <abbrev>DevRob</abbrev>
             <glossdef>
                 <para>TODO</para>
             </glossdef>
         </glossentry>
-        <glossentry xml:id="deepq">
+        <glossentry xml:id="deepq_glssry">
             <glossterm>Deep Q-Learning</glossterm>
             <abbrev>DeepQ</abbrev>
             <glossdef>
                 <para>TODO</para>
             </glossdef>
         </glossentry>
-        <glossentry xml:id="docbook">
+        <glossentry xml:id="docbook_glssry">
             <glossterm>DocBook XML</glossterm>
             <abbrev>DB</abbrev>
             <glossdef>
@@ -46,8 +57,41 @@
         </glossentry>
     </glossdiv>
     <glossdiv>
+        <title>L</title>
+        <glossentry xml:id="lzw_glssry">
+            <glossterm>Liv-Zempel-Welch algoritmus</glossterm>
+            <abbrev>LZW</abbrev>
+            <glossdef>
+                <para>
+                </para>
+            </glossdef>
+        </glossentry>
+    </glossdiv>    
+    <glossdiv>
+        <title>M</title>
+        <glossentry xml:id="mlp_glssry">
+            <glossterm>Multilayer Perceptron</glossterm>
+            <abbrev>MLP</abbrev>
+            <glossdef>
+                <para>
+                </para>
+            </glossdef>
+        </glossentry>
+    </glossdiv>    
+    <glossdiv>
+        <title>N</title>
+        <glossentry xml:id="nlp_glssry">
+            <glossterm>Natural Language Processing</glossterm>
+            <abbrev>NLP</abbrev>
+            <glossdef>
+                <para>
+                </para>
+            </glossdef>
+        </glossentry>
+    </glossdiv>    
+    <glossdiv>
         <title>U</title>
-        <glossentry xml:id="udprog">
+        <glossentry xml:id="udprog_glssry">
             <glossterm>The Yearbook of the Programmers of University of Debrecen</glossterm>
             <abbrev>UDPROG</abbrev>
             <glossdef>

@@ -94,7 +94,7 @@
             <revision>
                 <revnumber>Nahshon.0.0.2</revnumber>
                 <date>2015-12-02</date>
-                <revremark>Rendszermodellek és rendszer-evolúciós részek kidolgozása.</revremark>
+                <revremark>Rendszermodellek és rendszer-evolúciós részek vázlatos kidolgozása.</revremark>
             </revision>
         </revhistory>
     </info>   
@@ -257,11 +257,6 @@
                             az elmentett állapotból induljon el.
                         </para>
                     </listitem>  
-                    <listitem>
-                        <para>
-                            TODO                            
-                        </para>
-                    </listitem>                        
                 </itemizedlist>                
             </section>            
             <section>
@@ -317,6 +312,17 @@
                             </indexterm>GNU/Linux rendszereken.
                         </para>
                     </listitem>                                                                        
+                    <listitem>
+                        <para>
+                            Samu a feldolgozott tanuló korpuszait tartsa perzisztens gyorsító-tárban.     
+                        </para>
+                    </listitem>                                            
+                    <listitem>
+                        <para>
+                            Samu használja ki a CUDA kártya adta extrém párhuzmosságot, ha a futtató környezet
+                            rendelkezik ilyen kártyával.
+                        </para>
+                    </listitem>                                            
                 </itemizedlist>                                                                  
             </section>   
             <section>
@@ -569,26 +575,57 @@
                         </tgroup>      
                     </table>   
                 </para>
-            </section>    
-                    <section>
-            <title>Samu objektummodellje</title>
-            <para>
-            </para>
-            <para> 
-                <figure>
-                    <title>Samu osztálydiagramja</title>
-                    <mediaobject>
-                        <imageobject>
-                            <imagedata fileref="img/cd1.png" scale="55" />
-                        </imageobject>
-                        <textobject>
-                            <phrase>Samu osztálydiagramja.</phrase>
-                        </textobject>
-                    </mediaobject>
-                </figure>                            
-            </para>            
-                    
-                    </section>                
+            </section>  
+            <section>
+                <title>Samu adatmodelljei</title>
+                <para>
+                    Samu jelenlegi eldobható gyors prototípusainak alapvető működése 
+                    a természetes nyelvi mondatokból kibányászott 
+                    Alany-Állítmány-Tárgy tripletekre épül, egy ilyen triplet alapesetben
+                    3 szóból áll, a részletek tekintetében lásd a <citation>SAMU</citation> publikációt.  
+                </para>
+                <para>
+                    A tripletek kibányászására mint COTS komponenst a 
+                    <link xlink:href="https://github.com/opencog/link-grammar">opencog/link-grammar</link> 
+                    NLP eszköszt használjuk.
+                </para>
+                <para>
+                    Samu tanulása során minden triplethez egy egyedi MLP neurális hálózatot rendel,
+                    ezek perzisztens tárolásáról gondoskodni kell. A hálózatok mérete jellemző, a 
+                    bemenő réteg neuronjainak a száma Samu vizuális képzeletének szélesség x magasság
+                    számával egyezik meg.
+                </para>
+                <para>
+                    Az Amminadan prototípus bevezette, hogy a tripleteket egy LZW fában is tárolja Samu,
+                    lásd a részletek tekintetében a <citation>SAMU</citation> publikációt.  
+                </para>
+            </section>              
+            <section>
+                <title>Samu objektummodellje</title>
+                <para>
+                </para>
+                <para> 
+                    <figure>
+                        <title>Samu osztálydiagramja</title>
+                        <mediaobject>
+                            <imageobject>
+                                <imagedata fileref="img/cd1.png" scale="55" />
+                            </imageobject>
+                            <textobject>
+                                <phrase>Samu osztálydiagramja.</phrase>
+                            </textobject>
+                        </mediaobject>
+                    </figure>                            
+                </para>            
+                <para>
+                    A <classname>Samu</classname> osztály reprezentálja Samu Nahshon verzióját. 
+                    Samunak olyan integrált része a vizuális képzelete, hogy azt a 
+                    <classname>VisualImagery</classname> belső osztállyal absztraháltuk. Samuval
+                    az NLP-s COTS funkciókat elfedő <classname>NLP</classname> osztály, a vizuális 
+                    képzelettel pedig Samu tanulását megvalósító <classname>QL</classname> osztály van 
+                    kompozícióban.
+                </para>                    
+            </section>                
         </section>
     </chapter>    
     <chapter>
@@ -599,9 +636,54 @@
             </keywordset>
         </info>
         <section>
-            <title></title>
+            <title>Samu vezérlése</title>
             <para>
+                Már az Amminadab eldobható gyors protó végén, amikor itt Samu hálózati csevegő-szerver funkciója 
+                megvalósításra került, felmerült, hogy a következő lépésben kifejlesztendő csevegő kliens funkció
+                az alábbi három használati esetet támogassa:
+                <itemizedlist>
+                    <listitem>
+                        <para>
+                            Samu programja humán partnerrel beszélget (ez nem újdonság az eddigiekhez képest).
+                        </para>
+                    </listitem>                
+                    <listitem>
+                        <para>
+                            Samu egy másik Samuval beszélget.
+                        </para>
+                    </listitem>                
+                    <listitem>
+                        <para>
+                            Samu magában beszélget.
+                        </para>
+                    </listitem>                
+                </itemizedlist>                
+                Az utóbbi két használati eset tudományos igényességű vizsgálata a 
+                <citation></citation> kézirat kapcsán a jelen pillanatban is folyik. Ami a jelen dokumentum 
+                szempontjából érdekes az az, hogy el akarjuk kerülni az alábbi jellegű implementációt:
+                
+           <programlisting language="C">
+<![CDATA[        main()
+        {
+        ...
+        if(random() < a_magic_number)
+         Samu_starts_talk();
+        ...
+        }
+]]>
+           </programlisting>                 
+                hanem e helyett azt szeretnénk, hogy Samu &#x201E;szabad akaratából&#x201D; tegye ezt! 
+           Hasonló szituációt említünk meg
+           a <citation>SAMU</citation> kéziratban:
+           
+              <blockquote>
+                  <para>
+                      &#x201E;This is also reinforced by the fact that the incremental learning was implemented in the main.cpp and not in a class of Samu. From a point of view of a programmer, it means that the incremental approach is not yet really part of Samu.&#x201D;
+                  </para>
+              </blockquote>
+           Tehát adott a kihívás, hogy megpróbáljuk mindezt, mint egyfajta belső vezérlést, Samu tanuló algoritmusába integrálni!
             </para>
+            
         </section>
     </chapter>    
     <bibliography>
