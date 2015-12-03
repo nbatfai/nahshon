@@ -216,7 +216,11 @@
                             olvas/hall egy mondatot (fontos, hogy itt csak sima karakteres input van, tehát 
                             az &#x201E;olvass&#x201D;, 
                             &#x201E;hall&#x201D; egyelőre szimpla metaforák, számunkra csak a karekteres 
-                            be/kimenet a lényeg, praktikusan gondolj a Turing tesztre vagy a Loebner díjra.)                            
+                            be/kimenet a lényeg, praktikusan gondolj a <indexterm>
+                                <primary>Turing teszt</primary> 
+                            </indexterm>Turing tesztre vagy a <indexterm>
+                                <primary>Loebner díj</primary> 
+                            </indexterm>Loebner díjra.)                            
                         </para>
                     </listitem>                
                     <listitem>
