@@ -9,6 +9,8 @@
             <abbrev>CUDA</abbrev>
             <glossdef>
                 <para>
+                    Olyan az NVIDIA GPU-kon futó extrém párhuzamos programozási platform, amely
+                    adott esetekben PC-n megvalósított HPC számítási teljesítményt tesz elérhetővé.  
                 </para>
             </glossdef>
         </glossentry>
@@ -22,6 +24,7 @@
             <glossdef>
                 <para>A szoftverkövetelmény dokumentum
                     <link xlink:href="http://ieeexplore.ieee.org/xpl/mostRecentIssue.jsp?punumber=5841">IEEE szabványa</link>.
+                    A jelen dokumentum a Samu projekt SRS dokumentuma.
                 </para>
             </glossdef>
         </glossentry>
@@ -32,14 +35,17 @@
             <glossterm>Developmental Robotics</glossterm>
             <abbrev>DevRob</abbrev>
             <glossdef>
-                <para>TODO</para>
+                <para>A robotika azon interdiszciplináris (például robotika, informatika, neveléstudomány, pedagógia, 
+                    pszichológia, orvostudomány, nyelvészet stb.) 
+                    ága amely az MI fejlesztésébn irányadónak tartja az emberi egyéni fejlődésének tanulmányozását.</para>
             </glossdef>
         </glossentry>
         <glossentry xml:id="deepq_glssry">
             <glossterm>Deep Q-Learning</glossterm>
             <abbrev>DeepQ</abbrev>
             <glossdef>
-                <para>TODO</para>
+                <para>A megerősítéses tanulás Q-learning technikájának mély neurális hálózati implementációkkal támogatott 
+                    megvalósítása.</para>
             </glossdef>
         </glossentry>
         <glossentry xml:id="docbook_glssry">
@@ -47,12 +53,12 @@
             <abbrev>DB</abbrev>
             <glossdef>
                 <para>A <indexterm>
-                    <primary>DocBook</primary> 
-                    <secondary>XML</secondary>
-                </indexterm>
-                <link xlink:href="http://docbook.org/tdg51/en/html/">DocBook</link> 
-                elsősorban az informatikai tárgyú írásos dokumentumok készítésére és annotálására kifejlesztett 
-                modern, szabványos jelölőnyelv.</para>
+                        <primary>DocBook</primary> 
+                        <secondary>XML</secondary>
+                    </indexterm>
+                    <link xlink:href="http://docbook.org/tdg51/en/html/">DocBook</link> 
+                    elsősorban az informatikai tárgyú írásos dokumentumok készítésére és annotálására kifejlesztett 
+                    modern, szabványos jelölőnyelv.</para>
             </glossdef>
         </glossentry>
     </glossdiv>
@@ -63,6 +69,8 @@
             <abbrev>LZW</abbrev>
             <glossdef>
                 <para>
+                    Széles körben használt, gyors és hatékony (például gif képek vagy <application>gzip</application> programok)
+                    tömöríti algoritmus.
                 </para>
             </glossdef>
         </glossentry>
@@ -74,6 +82,7 @@
             <abbrev>MLP</abbrev>
             <glossdef>
                 <para>
+                    Rejtett rétegeket tartalmazó mesterséges neurális hálózat, ahol minden neuron egy perceptron.
                 </para>
             </glossdef>
         </glossentry>
@@ -85,6 +94,8 @@
             <abbrev>NLP</abbrev>
             <glossdef>
                 <para>
+                    Az informatika azon ága, amely a természetes nyelvek feldolgozásával foglalkozik, különös 
+                    tekintettel annak gépi feldolgozására, az ember-gép kapcsolat ilyen alapú interakciójára.
                 </para>
             </glossdef>
         </glossentry>
@@ -102,6 +113,7 @@
                     melynek egyik gyújtópontjában <link xlink:href="http://sourceforge.net/p/udprog/code/ci/master/tree/">szoftverek</link>,
                     a másikban maga az
                     <link xlink:href="http://sourceforge.net/projects/udprog/files/?source=navbar">évkönyv</link> áll.
+                    A jelen dokumentum, mint egy példa alkalmazás, is bemutatásra kerül ebban a programozói közösségben is.
                 </para>
             </glossdef>
         </glossentry>
@@ -113,7 +125,8 @@
             <acronym>rObOCar World Championship, Robotautó Világbajnokság</acronym>
             <abbrev>OOCWC</abbrev>
             <glossdef>
-                <para>
+                <para>A Robotautó Világbajnokság egy olyan kezdeményezés, amely szoftverplatformot kíván biztosítani
+                    az okos városok és a robotautók kommunikációjának kutatásához, alapja az
                     <link xlink:href="https://github.com/nbatfai/robocar-emulator">https://github.com/nbatfai/robocar-emulator</link>.
                 </para>
             </glossdef>

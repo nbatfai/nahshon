@@ -40,7 +40,7 @@
             <holder>Dr. Bátfai Norbert</holder>
         </copyright>
         <legalnotice>
-            <para>Samu Bátfai (Nahshon) Software Requirements Specification
+            <para>Samu Bátfai (Nahshon) Software Requirements Specification 
             </para>
             <para>                
                 Copyright (C) 2014, Norbert Bátfai. Ph.D., batfai.norbert@inf.unideb.hu
@@ -122,14 +122,23 @@
             <abstract>
                 <para>
                     Ez a dokumentum a Samu projekt SRS (Software Requirements Specification) dokumentuma.
-                </para>
+                </para> 
             </abstract>
         </info>
+        <para>
+            Ez a dokumentum a Samu projekt SRS (Software Requirements Specification) dokumentuma.
+        </para> 
         <section>
             <title>Bátfai Samu</title>
             <para>
-                Samu egy kutatási kezdeményezés egy olyan testetlen fejlődési robotikus (developmental robotic) ágens
-                létrehozására, amely az emberrel összemérhető képességű csevegő robotok létrehozásának alapjául szolgálhat. 
+                Samu egy kutatási kezdeményezés egy olyan testetlen fejlődési robotikus 
+                (<indexterm>
+                    <primary>developmental robotic</primary> 
+                </indexterm>developmental robotic) ágens
+                létrehozására, amely az emberrel összemérhető képességű 
+                <indexterm>
+                    <primary>csevegő robot</primary> 
+                </indexterm>csevegő robotok létrehozásának alapjául szolgálhat. 
             </para>
             <para>
                 Az aktuális kutatási eredményeket a <citation>SAMU</citation> kézirat mutatja be.
@@ -139,7 +148,10 @@
                 körben lesz nevelendő! 
             </para>
             <para>
-                A jelen pillanatig számos eldobható gyors prototípust fejlesztettünk Samu teszteléséhez, ezek a következők:
+                A jelen pillanatig számos 
+                <indexterm>
+                    <primary>eldobható gyors prototípus</primary> 
+                </indexterm>eldobható gyors prototípust fejlesztettünk Samu teszteléséhez, ezek a következők:
                 <itemizedlist>
                     <listitem>
                         <para>
@@ -194,7 +206,9 @@
                 </itemizedlist>
             </para>
             <para>
-                Ezeket az eldobható gyors prototípusokat részletesen a <citation>SAMU</citation> kézirat mutatja be, 
+                Ezeket az <indexterm>
+                    <primary>eldobható gyors prototípus</primary> 
+                </indexterm>eldobható gyors prototípusokat részletesen a <citation>SAMU</citation> kézirat mutatja be, 
                 működésük elvi vázlata a következő: Samu
                 <itemizedlist>
                     <listitem>
@@ -212,7 +226,10 @@
                     </listitem>                
                     <listitem>
                         <para>
-                            a képet benyomja egy Q-tanulásos algoritmusnak, ahol akkor kap pozitív megerősítést, ha a szimulációs program kimenete és a valóság egyezést mutat, a Q-tanulás kimenete a programírás finomítása                            
+                            a képet benyomja egy <indexterm>
+                                <primary>Q-tanulás</primary> 
+                            </indexterm>Q-tanulásos algoritmusnak, ahol akkor kap pozitív megerősítést, ha a szimulációs program kimenete és a valóság egyezést mutat, 
+                            a Q-tanulás kimenete a programírás finomítása                            
                         </para>
                     </listitem>                
                 </itemizedlist>
@@ -226,7 +243,10 @@
                     <listitem>
                         <para>
                             NLP (Natural Language Processing) eszközökkel kibányássza belőla a 
-                            ALANY-ÁLLÍTMÁNY-TÁRGY (SPO) tripleteket
+                            ALANY-ÁLLÍTMÁNY-TÁRGY 
+                            (<indexterm>
+                                <primary>SPO</primary> 
+                            </indexterm>SPO) tripleteket
                         </para>
                     </listitem>                
                     <listitem>
@@ -238,7 +258,10 @@
                     </listitem>                
                     <listitem>
                         <para>
-                            a képet benyomja egy Q-tanulásos algoritmusnak, 
+                            a képet benyomja egy 
+                            <indexterm>
+                                <primary>Q-tanulás</primary> 
+                            </indexterm>Q-tanulásos algoritmusnak, 
                             ahol akkor kap pozitív megerősítést, ha jól tudja kitalálni a 
                             beszélgetés következő mondatát (amit nyilván akár ki is 
                             mondhat – azaz írhat ugye – ha csevegésre kerül a sor), a Q-tanulás
@@ -277,7 +300,10 @@
         <section>
             <title>Samu áttekintése</title>   
             <para>        
-                Az előző fejezet rövid szöveges áttekintő leírása alapján elkészítünk egy az UML komponens
+                Az előző fejezet rövid szöveges áttekintő leírása alapján elkészítünk egy az 
+                <indexterm>
+                    <primary>UML</primary> 
+                </indexterm>UML komponens
                 diagramok jelöléseit használó magyarázó ábrát. 
             </para>                                                       
         </section>         
@@ -287,7 +313,9 @@
             <para> 
                 A szokásos funkcionális és nem funkcionális követelményeken túl Samu esetén meg kell
                 fogalmaznunk fontos szakterületi követelményeket is, hiszen a fejlesztés mögött a 
-                mély Q-tanulás alkalmazása és kutatása áll. A szakterületi követelmények után
+                mély <indexterm>
+                    <primary>Q-tanulás</primary> 
+                </indexterm>Q-tanulás alkalmazása és kutatása áll. A szakterületi követelmények után
                 a tervezési folyamatot a rendszerkövetelmények áttekintésével segítjük.
             </para>
             <section>
@@ -361,17 +389,31 @@
                     </listitem>                                
                     <listitem>
                         <para>
-                            Samu legyen open source alapú, lehetőleg GNU GPL v3. A dokumentálás nyelve DocBook XML 5.1 szabvány.
+                            Samu legyen 
+                            <indexterm>
+                                <primary>open source</primary> 
+                            </indexterm>open source alapú, lehetőleg 
+                            <indexterm>
+                                <primary>GNU</primary> 
+                                <secondary>GPL</secondary>
+                            </indexterm>GNU GPL v3. A dokumentálás nyelve 
+                            <indexterm>
+                                <primary>DocBook</primary> 
+                            </indexterm>DocBook XML 5.1 szabvány.
                         </para>
                     </listitem>                                                    
                     <listitem>
                         <para>
-                            Samu tanító korpuszai legyenek open source alapú korpuszok.
+                            Samu tanító korpuszai legyenek <indexterm>
+                                <primary>open source</primary> 
+                            </indexterm>open source alapú korpuszok.
                         </para>
                     </listitem>                                                                        
                     <listitem>
                         <para>
-                            Samu fusson UNIX-típusú rendszereken, például 
+                            Samu fusson <indexterm>
+                                <primary>UNIX</primary> 
+                            </indexterm>UNIX-típusú rendszereken, például 
                             <indexterm>
                                 <primary>GNU</primary> 
                                 <secondary>Linux</secondary>
@@ -386,7 +428,9 @@
                     </listitem>                                            
                     <listitem>
                         <para>
-                            Samu használja ki a CUDA kártya adta extrém párhuzmosságot, ha a futtató környezet
+                            Samu használja ki a <indexterm>
+                                <primary>CUDA</primary> 
+                            </indexterm>CUDA kártya adta extrém párhuzmosságot, ha a futtató környezet
                             rendelkezik ilyen kártyával.
                         </para>
                     </listitem>                                            
@@ -397,14 +441,21 @@
                 <section>
                     <title>Q-tanulás</title>                   
                     <para xml:id="samu_alg_activity"> 
-                        A Samu tanulásában alapvető Q-tanuláshoz szükséges a megerősítéses tanulás alapjának, azaz a 
+                        A Samu tanulásában alapvető <indexterm>
+                            <primary>Q-tanulás</primary> 
+                        </indexterm>Q-tanuláshoz szükséges a megerősítéses tanulás alapjának, azaz a 
                         jutalomnak és a büntetésnek a biztosítása. Ezt Samu a <citation>SAMU</citation> kéziratban
-                        bemutatott módon valósítja meg, ezt foglalja össze a következő, az UML aktivitás diagramjainak jelöléseit
+                        bemutatott módon valósítja meg, ezt foglalja össze a következő, az 
+                        <indexterm>
+                            <primary>UML</primary> 
+                        </indexterm>UML aktivitás diagramjainak jelöléseit
                         használó ábra. 
                     </para>            
                     <para>
                         <figure>
-                            <title>Samu Q-tanulása</title>
+                            <title>Samu <indexterm>
+                                    <primary>Q-tanulás</primary> 
+                                </indexterm>Q-tanulása</title>
                             <mediaobject>
                                 <imageobject>
                                     <imagedata fileref="img/a1.png" scale="55" />
@@ -429,7 +480,7 @@
             <section>
                 <title>Felhasználói követelmények</title>   
                 <para> 
-                    A felhasználók felé Samu programja klasszikus cseegőprogramként jelenik meg.
+                    A felhasználók felé Samu programja klasszikus csevgőprogramként jelenik meg.
                 </para>            
                 <itemizedlist>
                     <listitem>
@@ -467,7 +518,9 @@
             <section>
                 <title>Rendszerkövetelmények</title>   
                 <para> 
-                    A követelmények feltárását az UML használati eset diagramjainak jelöléseivel készített
+                    A követelmények feltárását az <indexterm>
+                        <primary>UML</primary> 
+                    </indexterm>UML használati eset diagramjainak jelöléseivel készített
                     ábrákkal segítjük.
                 </para>
                 <section>
@@ -562,10 +615,14 @@
         <section>
             <title>Rendszer-specifikáció</title>
             <para>
-                Jó gyakorlat a rendszerkövetelmények elemzésére az eldobható gyors
+                Jó gyakorlat a rendszerkövetelmények elemzésére az <indexterm>
+                    <primary>eldobható gyors prototípus</primary> 
+                </indexterm>eldobható gyors
                 prototípusok grafikus modelljeinek elkészítése. Ezek számos esetben (például az osztálymodell
                 esetén osztálydiagramok formájában) automatikusan, reverse engineering jelleggel és egyben az agilis
-                szemlélettel összhangban magukból az eldobható gyors prototípusok forráskódjaiból is generálhatóak.
+                szemlélettel összhangban magukból az <indexterm>
+                    <primary>eldobható gyors prototípus</primary> 
+                </indexterm>eldobható gyors prototípusok forráskódjaiból is generálhatóak.
             </para>
             <section>
                 <title>Samu viselkedése madártávlatból</title>
@@ -646,7 +703,9 @@
             <section>
                 <title>Samu adatmodelljei</title>
                 <para>
-                    Samu jelenlegi eldobható gyors prototípusainak alapvető működése 
+                    Samu jelenlegi <indexterm>
+                        <primary>eldobható gyors prototípus</primary> 
+                    </indexterm>eldobható gyors prototípusainak alapvető működése 
                     a természetes nyelvi mondatokból kibányászott 
                     Alany-Állítmány-Tárgy tripletekre épül, egy ilyen triplet alapesetben
                     3 szóból áll, a részletek tekintetében lásd a <citation>SAMU</citation> publikációt.  
@@ -705,7 +764,9 @@
         <section>
             <title>Samu vezérlése</title>
             <para>
-                Már az Amminadab eldobható gyors protó végén, amikor itt Samu hálózati csevegő-szerver funkciója 
+                Már az Amminadab <indexterm>
+                    <primary>eldobható gyors prototípus</primary> 
+                </indexterm>eldobható gyors protó végén, amikor itt Samu hálózati csevegő-szerver funkciója 
                 megvalósításra került, felmerült, hogy a következő lépésben kifejlesztendő csevegő kliens funkció
                 az alábbi három használati esetet támogassa:
                 <itemizedlist>
@@ -760,22 +821,33 @@
                 Mint ilyet ebben a szekcióban potenciálisan összekapcsoljuk a Samu projektet a kutatásban már 
                 sikeresnek <citation>OOCWC1</citation>,
                 <citation>OOCWC2</citation>, <citation>OOCWC3</citation>, <citation>OOCWC4</citation>
-                mondható OOCWC projekttel: ez a potenciális kapcsolat a beágyazott Samu. 
+                mondható <indexterm>
+                    <primary>OOCWC</primary> 
+                </indexterm>OOCWC projekttel: ez a potenciális kapcsolat a beágyazott Samu. 
             </para>
             <para>
                 A beágyazott Samu nem csupán egy &#x201E;Az ember legjobb barátja a kocsi&#x201D; típusú rendszer,
-                ahol Samu az autókba tervezett MI része lehetne (mondjuk UI-ként), hanem az OOCWC alábbi 
+                ahol Samu az autókba tervezett MI része lehetne (mondjuk UI-ként), hanem az <indexterm>
+                    <primary>OOCWC</primary> 
+                </indexterm>OOCWC alábbi 
                 konkrét fejlesztése, amelyet
-                most speciálisan az OOCWC rendőrségi kiadására fogalmazunk meg.
+                most speciálisan az <indexterm>
+                    <primary>OOCWC</primary> 
+                </indexterm>OOCWC rendőrségi kiadására fogalmazunk meg.
             </para>
             <para>
-                Bevezetjük az OOCWC kliens ágensek olyan TCP-s parancskészlet kiegészítését, amely a meglévő
+                Bevezetjük az <indexterm>
+                    <primary>OOCWC</primary> 
+                </indexterm>OOCWC kliens ágensek olyan TCP-s parancskészlet kiegészítését, amely a meglévő
                 (pl.: init, pos, car, route stb.) parancsok mellé olyan további protokoll-parancsokat ad,
                 amelyek azt biztosítják, hogy a rendőr ágensek természetes nyelven (csevegés) kommunikálva tudják egymással 
                 összehangolni a tevékenységüket (intuitív értelemben asszociálhatunk a robotfoci say parancsára).
             </para>
             <para>Tekintsünk egy konkrét használati eset csipetet az ötlet megvilágítására:
-                tegyük fel, hogy ezt mondja a rendőr multiágenseket összefogó diszpécser ágens:
+                tegyük fel, hogy ezt mondja a rendőr 
+                <indexterm>
+                    <primary>multiágens</primary> 
+                </indexterm>multiágenseket összefogó diszpécser ágens:
                 <itemizedlist>
                     <listitem>
                         <para>
@@ -789,12 +861,16 @@
                     </listitem>                
                 </itemizedlist>                
                 nyilván azok az ágensek, akik &#x201E;értik&#x201D; ezeknek a forgalmazott
-                üzeneteknek a tartalmát és ennek megfelelően a Füreire mennek várhatóan 
+                üzeneteknek a tartalmát és ennek megfelelően a Füredire mennek várhatóan 
                 előnybe kerülnek az elfogások számában.
             </para>
             <para>
                 Ez természetesen egy új kiadást is kíván, mert erre az átszövő vonatkozásra a 
-                szerveroldalt is fel kell készíteni például. Ez az új kiadás lesz a <emphasis>SAMU-OOCWC</emphasis>.
+                szerveroldalt is fel kell készíteni például. Ez az új kiadás lesz a 
+                <indexterm>
+                    <primary>SAMU-OOCWC</primary> 
+                </indexterm>
+                <emphasis>SAMU-OOCWC</emphasis>.
             </para>
         </section>        
     </chapter>    
