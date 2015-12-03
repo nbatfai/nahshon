@@ -183,6 +183,62 @@
                     </listitem>                
                 </itemizedlist>
             </para>
+            <para>
+                Ezeket az eldobható gyors prototípusokat részletesen a <citation>SAMU</citation> kézirat mutatja be, 
+                működésük elvi vázlata a következő: Samu
+                <itemizedlist>
+                    <listitem>
+                        <para>
+                            olvas/hall egy mondatot (fontos, hogy itt csak sima karakteres input van, tehát az &#x201E;olvass&#x201;, 
+                            &#x201E;hall&#x201D; egyelőre szimpla metaforák, számunkra csak a karekteres 
+                            be/kimenet a lényeg, praktikusan gondolj a Turing tesztre vagy a Loebner díjra.)                            
+                        </para>
+                    </listitem>                
+                    <listitem>
+                        <para>
+                            egy bekezdés mondatait szimulációs programnak kezeli, amely programot futtat, s annak kimenetét egy képre rajzolja                            
+                        </para>
+                    </listitem>                
+                    <listitem>
+                        <para>
+                            a képet benyomja egy Q-tanulásos algoritmusnak, ahol akkor kap pozitív megerősítést, ha a szimulációs program kimenete és a valóság egyezést mutat, a Q-tanulás kimenete a programírás finomítása                            
+                        </para>
+                    </listitem>                
+                </itemizedlist>
+                amelyekből az alábbi konkrét lépéseket valósítják meg:
+                <itemizedlist>
+                    <listitem>
+                        <para>
+                            olvas egy mondatot
+                        </para>
+                    </listitem>                
+                    <listitem>
+                        <para>
+                            NLP (Natural Language Processing) eszközökkel kibányássza belőla a 
+                            ALANY-ÁLLÍTMÁNY-TÁRGY (SPO) tripleteket
+                        </para>
+                    </listitem>                
+                    <listitem>
+                        <para>
+                            amelyeket OO szemléletben egyszerű ALANY.ÁLLÍTMÁNY(TÁRGY); alakú programutasítás 
+                            formájában ráírja egy képre (lásd a futtatási könyvtárban a 
+                            sok generált samu-*.png képeket – jelen pillanatban így fest Samu vizuális képzelete)
+                        </para>
+                    </listitem>                
+                    <listitem>
+                        <para>
+                            a képet benyomja egy Q-tanulásos algoritmusnak, 
+                            ahol akkor kap pozitív megerősítést, ha jól tudja kitalálni a 
+                            beszélgetés következő mondatát (amit nyilván akár ki is 
+                            mondhat – azaz írhat ugye – ha csevegésre kerül a sor), a Q-tanulás
+                            kimenete egyszerűen a prediktált következő mondat (triplet).
+                        </para>
+                    </listitem>                
+                </itemizedlist>
+                Ezen megvalósítás vizuális interpretációját mutatja a 
+                <link xlink:href="#samu_alg_activity">Samu tanulási algoritmusának</link> folyamatábrája.
+            </para>
+            
         </section>
         <section>
             <title>A fejlesztendő rendszer áttekintő leírása</title>
@@ -659,10 +715,10 @@
                     </listitem>                
                 </itemizedlist>                
                 Az utóbbi két használati eset tudományos igényességű vizsgálata a 
-                <citation></citation> kézirat kapcsán a jelen pillanatban is folyik. Ami a jelen dokumentum 
+                <citation>PRENATAL</citation> kézirat kapcsán a jelen pillanatban is folyik. Ami a jelen dokumentum 
                 szempontjából érdekes az az, hogy el akarjuk kerülni az alábbi jellegű implementációt:
                 
-           <programlisting language="C">
+                <programlisting language="C">
 <![CDATA[        main()
         {
         ...
@@ -671,25 +727,88 @@
         ...
         }
 ]]>
-           </programlisting>                 
+                </programlisting>                 
                 hanem e helyett azt szeretnénk, hogy Samu &#x201E;szabad akaratából&#x201D; tegye ezt! 
-           Hasonló szituációt említünk meg
-           a <citation>SAMU</citation> kéziratban:
+                Hasonló szituációt említünk meg
+                a <citation>SAMU</citation> kéziratban:
            
-              <blockquote>
-                  <para>
+                <blockquote>
+                    <para>
                       &#x201E;This is also reinforced by the fact that the incremental learning was implemented in the main.cpp and not in a class of Samu. From a point of view of a programmer, it means that the incremental approach is not yet really part of Samu.&#x201D;
-                  </para>
-              </blockquote>
-           Tehát adott a kihívás, hogy megpróbáljuk mindezt, mint egyfajta belső vezérlést, Samu tanuló algoritmusába integrálni!
+                    </para>
+                </blockquote>
+                Tehát adott a kihívás, hogy megpróbáljuk mindezt, mint egyfajta belső vezérlést, Samu tanuló algoritmusába integrálni!
             </para>
             
         </section>
+        <section>
+            <title>Beágyazott Samu</title>
+            <para>
+                &#x201E;Az ember legjobb barátja a kocsi&#x201D; típusú rendszerek kapcsán már hangsúlyoztam
+                <citation>IMITGAME</citation> annak fontosságát, hogy a fejlesztés mögött legyen izgalmas motiváció.
+                Mint ilyet ebben a szekcióban potenciálisan összekapcsoljuk a Samu projektet a kutatásban már 
+                sikeresnek <citation>OOCWC1</citation>,
+                <citation>OOCWC2</citation>, <citation>OOCWC3</citation>, <citation>OOCWC4</citation>
+                mondható OOCWC projekttel: ez a potenciális kapcsolat a beágyazott Samu. 
+            </para>
+            <para>
+                A beágyazott Samu nem csupán egy &#x201E;Az ember legjobb barátja a kocsi&#x201D; típusú rendszer,
+                ahol Samu az autókba tervezett MI része lehetne (mondjuk UI-ként), hanem az OOCWC alábbi 
+                konkrét fejlesztése, amelyet
+                most speciálisan az OOCWC rendőrségi kiadására fogalmazunk meg.
+            </para>
+            <para>
+                Bevezetjük az OOCWC kliens ágensek olyan TCP-s parancskészlet kiegészítését, amely a meglévő
+                (pl.: init, pos, car, route stb.) parancsok mellé olyan további protokoll-parancsokat ad,
+                amelyek azt biztosítják, hogy a rendőr ágensek természetes nyelven (csevegés) kommunikálva tudják egymással 
+                összehangolni a tevékenységüket (intuitív értelemben asszociálhatunk a robotfoci say parancsára).
+            </para>
+            <para>Tekintsünk egy konkrét használati eset csipetet az ötlet megvilágítására:
+                tegyük fel, hogy ezt mondja a rendőr multiágenseket összefogó diszpécser ágens:
+                <itemizedlist>
+                    <listitem>
+                        <para>
+                            remek fánkot vett a 7. egység a Kassai úton
+                        </para>
+                    </listitem>                
+                    <listitem>
+                        <para>
+                            gyanús elemek mentek be az ékszerboltba a Füredin
+                        </para>
+                    </listitem>                
+                </itemizedlist>                
+                nyilván azok az ágensek, akik &#x201E;értik&#x201D; ezeknek a forgalmazott
+                üzeneteknek a tartalmát és ennek megfelelően a Füreire mennek várhatóan 
+                előnybe kerülnek az elfogások számában.
+            </para>
+            <para>
+                Ez természetesen egy új kiadást is kíván, mert erre az átszövő vonatkozásra a 
+                szerveroldalt is fel kell készíteni például. Ez az új kiadás lesz a <emphasis>SAMU-OOCWC</emphasis>.
+            </para>
+        </section>        
     </chapter>    
     <bibliography>
         <title>Irodalomjegyzék</title>
         <bibliodiv>
             <title>Kutatási cikkek</title>
+            <biblioentry>
+                <abbrev>PRENATAL</abbrev>
+                <authorgroup>
+                    <author>
+                        <personname>
+                            <surname>Bátfai</surname>
+                            <firstname>Norbert</firstname>        
+                        </personname>    
+                    </author>
+                </authorgroup>
+                <title>Samu in his prenatal development</title>
+                <publisher>
+                    <publishername>
+                        (kézirat, írása folyamatban)
+                    </publishername>
+                </publisher>
+                <pubdate>2015</pubdate>
+            </biblioentry>                         
             <biblioentry>
                 <abbrev>SAMU</abbrev>
                 <authorgroup>
@@ -709,6 +828,24 @@
                 <pubdate>2015</pubdate>
             </biblioentry> 
             <biblioentry>
+                <abbrev>IMITGAME</abbrev>
+                <authorgroup>
+                    <author>
+                        <personname>
+                            <surname>Bátfai</surname>
+                            <firstname>Norbert</firstname>        
+                        </personname>    
+                    </author>
+                </authorgroup>
+                <title>Turing's Imitation Game has been Improved</title>
+                <publisher>
+                    <publishername>
+                        <link xlink:href="http://arxiv.org/abs/1509.00584">http://arxiv.org/abs/1509.00584</link>
+                    </publishername>
+                </publisher>
+                <pubdate>2015</pubdate>
+            </biblioentry>             
+            <biblioentry>
                 <abbrev>COP</abbrev>
                 <authorgroup>
                     <author>
@@ -726,6 +863,166 @@
                 </publisher>
                 <pubdate>2011</pubdate>
             </biblioentry>                        
+            <biblioentry>
+                <abbrev>OOCWC1</abbrev>
+                <authorgroup>
+                    <author>
+                        <personname>
+                            <surname>Bátfai</surname>
+                            <firstname>Norbert</firstname>        
+                        </personname>    
+                    </author>
+                    <author>
+                        <personname>
+                            <surname>Besenczi</surname>
+                            <firstname>Renátó</firstname>        
+                        </personname>    
+                    </author>
+                    <author>
+                        <personname>
+                            <surname>Mamenyák</surname>
+                            <firstname>András</firstname>        
+                        </personname>    
+                    </author>
+                    <author>
+                        <personname>
+                            <surname>Ispány</surname>
+                            <firstname>Márton</firstname>        
+                        </personname>    
+                    </author>                    
+                </authorgroup>
+                <title>OOCWC: The Robocar World Championship Initiative</title>
+                <biblioset relation="journal">
+                    <title>IEEE</title>
+                    <volumenum>10.1109/ConTEL.2015.7231223</volumenum>
+                    <pagenums>1-6</pagenums>
+                    <pubdate>2015</pubdate>
+                </biblioset>                
+                <publisher>
+                    <publishername>
+                        2015 IEEE 13th International Conference in Telecommunications (ConTEL)
+                        <link xlink:href="http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=7231223">http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=7231223</link>
+                    </publishername>
+                </publisher>
+                <pubdate>2015</pubdate>
+            </biblioentry>                        
+            <biblioentry>
+                <abbrev>OOCWC2</abbrev>
+                <authorgroup>
+                    <author>
+                        <personname>
+                            <surname>Bátfai</surname>
+                            <firstname>Norbert</firstname>        
+                        </personname>    
+                    </author>
+                    <author>
+                        <personname>
+                            <surname>Besenczi</surname>
+                            <firstname>Renátó</firstname>        
+                        </personname>    
+                    </author>
+                    <author>
+                        <personname>
+                            <surname>Mamenyák</surname>
+                            <firstname>András</firstname>        
+                        </personname>    
+                    </author>
+                    <author>
+                        <personname>
+                            <surname>Ispány</surname>
+                            <firstname>Márton</firstname>        
+                        </personname>    
+                    </author>                    
+                </authorgroup>
+                <title>Traffic Simulation based on the Robocar World Championship Initiative</title>
+                <biblioset relation="journal">
+                    <title>Infocommunications Journal</title>
+                    <volumenum>7:(3)</volumenum>
+                    <pagenums>50-59</pagenums>
+                    <pubdate>2015</pubdate>
+                </biblioset>                
+                <pubdate>2015</pubdate>
+            </biblioentry>                        
+            <biblioentry>
+                <abbrev>OOCWC3</abbrev>
+                <authorgroup>
+                    <author>
+                        <personname>
+                            <surname>Besenczi</surname>
+                            <firstname>Renátó</firstname>        
+                        </personname>    
+                    </author>
+                    <author>
+                        <personname>
+                            <surname>Szilágyi</surname>
+                            <firstname>Mihály</firstname>        
+                        </personname>    
+                    </author>
+                    <author>
+                        <personname>
+                            <surname>Bátfai</surname>
+                            <firstname>Norbert</firstname>        
+                        </personname>    
+                    </author>
+                    <author>
+                        <personname>
+                            <surname>Mamenyák</surname>
+                            <firstname>András</firstname>        
+                        </personname>    
+                    </author>
+                    <author>
+                        <personname>
+                            <surname>Oniga</surname>
+                            <firstname>Istvány</firstname>        
+                        </personname>    
+                    </author>                    
+                    <author>
+                        <personname>
+                            <surname>Ispány</surname>
+                            <firstname>Márton</firstname>        
+                        </personname>    
+                    </author>                    
+                </authorgroup>
+                <title>Using Crowdsensed Information for Traffic Simulation in the Robocar World Championship Framework</title>
+                <biblioset relation="journal">
+                    <title>Cognitive Infocommunications (CogInfoCom)</title>
+                    <volumenum>2015 6th IEEE Conference on</volumenum>
+                    <pagenums>333-337</pagenums>
+                    <pubdate>2015</pubdate>
+                </biblioset>                
+                <pubdate>2015</pubdate>
+            </biblioentry>                        
+            <biblioentry>
+                <abbrev>OOCWC4</abbrev>
+                <authorgroup>
+                    <author>
+                        <personname>
+                            <surname>Besenczi</surname>
+                            <firstname>Renátó</firstname>        
+                        </personname>    
+                    </author>
+                    <author>
+                        <personname>
+                            <surname>Katona</surname>
+                            <firstname>Tamás</firstname>        
+                        </personname>    
+                    </author>                    
+                    <author>
+                        <personname>
+                            <surname>Szilágyi</surname>
+                            <firstname>Mihály</firstname>        
+                        </personname>    
+                    </author>
+                </authorgroup>
+                <title>A Fork Implementation of the Police Edition of the OOCWC System</title>
+                <biblioset relation="journal">
+                    <title>Cognitive Infocommunications (CogInfoCom)</title>
+                    <volumenum>2015 6th IEEE Conference on</volumenum>
+                    <pagenums>163-164</pagenums>
+                    <pubdate>2015</pubdate>
+                </biblioset>                
+                <pubdate>2015</pubdate>
+            </biblioentry>                                    
         </bibliodiv>
     </bibliography>    
 </book>

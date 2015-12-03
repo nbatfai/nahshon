@@ -106,5 +106,19 @@
             </glossdef>
         </glossentry>
     </glossdiv>
+    <glossdiv>
+        <title>O</title>
+        <glossentry xml:id="oocwc_glssry">
+            <glossterm>Robocar World Championship</glossterm>
+            <acronym>rObOCar World Championship, Robotautó Világbajnokság</acronym>
+            <abbrev>OOCWC</abbrev>
+            <glossdef>
+                <para>
+                    <link xlink:href="https://github.com/nbatfai/robocar-emulator">https://github.com/nbatfai/robocar-emulator</link>.
+                </para>
+            </glossdef>
+        </glossentry>
+    </glossdiv>
+    
 </glossary>
 
