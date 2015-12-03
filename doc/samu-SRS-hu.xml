@@ -33,7 +33,7 @@
                 </otheraddr>
             </address>
         </author>
-        <edition>SAMU SRS, v. Nahshon.0.0.1</edition>
+        <edition>SAMU SRS, v. Nahshon.0.0.3</edition>
         <pubdate>2015</pubdate>
         <copyright>
             <year>2015</year>
@@ -96,6 +96,11 @@
                 <date>2015-12-02</date>
                 <revremark>Rendszermodellek és rendszer-evolúciós részek vázlatos kidolgozása.</revremark>
             </revision>
+            <revision>
+                <revnumber>Nahshon.0.0.3</revnumber>
+                <date>2015-12-04</date>
+                <revremark>A SAMU-OOCWC felvetése és javítások.</revremark>
+            </revision>
         </revhistory>
     </info>   
     <xi:include href="samu-glssry-SRS-hu.xml">
@@ -114,6 +119,11 @@
                 <keyword>Samu</keyword>
                 <keyword>Deep Q-learning</keyword>
             </keywordset>
+            <abstract>
+                <para>
+                    Ez a dokumentum a Samu projekt SRS (Software Requirements Specification) dokumentuma.
+                </para>
+            </abstract>
         </info>
         <section>
             <title>Bátfai Samu</title>
@@ -189,7 +199,8 @@
                 <itemizedlist>
                     <listitem>
                         <para>
-                            olvas/hall egy mondatot (fontos, hogy itt csak sima karakteres input van, tehát az &#x201E;olvass&#x201;, 
+                            olvas/hall egy mondatot (fontos, hogy itt csak sima karakteres input van, tehát 
+                            az &#x201E;olvass&#x201D;, 
                             &#x201E;hall&#x201D; egyelőre szimpla metaforák, számunkra csak a karekteres 
                             be/kimenet a lényeg, praktikusan gondolj a Turing tesztre vagy a Loebner díjra.)                            
                         </para>
