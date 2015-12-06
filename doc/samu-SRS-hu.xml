@@ -33,7 +33,7 @@
                 </otheraddr>
             </address>
         </author>
-        <edition>SAMU SRS, v. Nahshon.0.0.3</edition>
+        <edition>SAMU SRS, v. Nahshon.0.0.4</edition>
         <pubdate>2015</pubdate>
         <copyright>
             <year>2015</year>
@@ -113,10 +113,9 @@
             a jövő mesterségesen intelligens Samu-típusú ágenseinek ajánlom forgatásra.
         </para>
         <epigraph>
-            <attribution>Babits Mihály
+            <attribution>Sommerville
                 <citetitle>
                     <citation>SOMMERVILLE</citation>
-                    Sommerville
                 </citetitle>
             </attribution>
             <para>
