@@ -33,7 +33,7 @@
                 </otheraddr>
             </address>
         </author>
-        <edition>SAMU SRS, v. Nahshon.0.0.4</edition>
+        <edition>SAMU SRS, v. Nahshon.0.0.5</edition>
         <pubdate>2015</pubdate>
         <copyright>
             <year>2015</year>
@@ -105,6 +105,11 @@
                 <revnumber>Nahshon.0.0.4</revnumber>
                 <date>2015-12-06</date>
                 <revremark>A tervezési dokumentáció megkezdése.</revremark>
+            </revision>
+            <revision>
+                <revnumber>Nahshon.0.0.5</revnumber>
+                <date>2015-12-07</date>
+                <revremark>A Samu-böngésző koncepciójának felvetése.</revremark>
             </revision>
         </revhistory>
     </info>   
@@ -913,6 +918,38 @@
                     <emphasis>SAMU-OOCWC</emphasis>.
                 </para>
             </section>        
+            <section>
+                <title>Samu böngésző</title>
+                <para>
+                    A 2000-es évek elején személyes tapasztalatom volt, hogy az internetes keresők
+                    sokat, de leginkább a keresésem szempontjából irreleváns találatot adtak. A Google 
+                    e miatt lett azonnal a keresőm, hiszen azokat adta a találatokban, amelyekről úgy gondoltam, hogy
+                    igen, ezeket kerestem. 
+                </para>
+                <para>
+                    Manapság dejavu érzésem van, amikor guglizok, mert a találatok relavanciája nem kérdéses, de 
+                    sokszor érzem úgy, hogy mást, vagy máshogy keresek. Egészen konkrétan azt érzem, hogy a Google bár remek és 
+                    fontos találatokat ad, ám ennek ellenére NEM TUDJA, HOGY MIT AKAROK, NEM TUDJA, HOGY MIT KERESEK...  
+                    tovább ragozva: NEM ISMER ENGEM.
+                </para>
+                <para>
+                    A Samu böngésző erre az érzésre épül. Nézzünk rá egy konkrét használati esetet. A mostani Samut átteszem
+                    a szerver oldalra, a böngészőből felkeresem, ahol a prózai felületen megadok egy címet. Ezt Samu letölti, minden
+                    linkjébe befűzi magát és ezt az így megpatkolt linkes lapot küldi vissza a böngészőmbe. Tehát itt Samu egy proxy 
+                    szerepét tölti be (e tekintetben mint az 
+                    <link xlink:href="http://www.inf.unideb.hu/~nbatfai/Prog2_1.pptx">UDPROG/1. prog előadás 88-89 fóliáján</link> 
+                    említett Prizma progi). 
+                    Ámde közben Samu el is olvassa az oldal tartalmát, hiszen ez Samu eredeti funkciója. A &#x201E;HTML-szemétből&#x201D;
+                    a linkeket kivéve úgy módosítom a Q-learning alapú predikciót, hogy a következő kiválasztott linkemet 
+                    prediktálja (mint ahogyan az eredeti Samu az olvasott sztori következő mondatát). Ezzel Samu egy olyan személyi aszisztenssé válik, 
+                    aki megtanulja a böngészési szokásaimat. Mert ugye úgyis böngészek és mondjuk a következő hónapban ezt Samun keresztül teszem.    
+                </para>
+                <para>
+                    Ha Samu meg tudja tanulni a böngészési szokásaimat, meg tud úgy tanulni böngészni mint én, akkor
+                    Samu szimulálni is tud engem. Ha tud szimulálni akkor ismer... hogy ezt hogyan tudjuk kihasználni
+                    egy még a Google-nál is jobb kereső megírására, nos erről kezdtünk most éppen el beszélgetni :)
+                </para>                
+            </section>
         </chapter>    
     </part>  
     <part xml:id="samu-SRS-hu.part2">
