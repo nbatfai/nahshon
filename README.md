@@ -97,3 +97,38 @@ introduced in the paper entitled [Conscious Machines and Consciousness Oriented 
 4. uses multilayer perceptrons for approximation of the Q function, 
 it is a deep Q learning feature, [Human-level control through deep reinforcement learning](http://www.nature.com/nature/journal/v518/n7540/full/nature14236.html)
 
+
+## Other experiments with Samu's COP-based Q-learning agent
+
+Samu (Nahshon)
+http://arxiv.org/abs/1511.02889, 
+https://github.com/nbatfai/nahshon
+
+---
+
+SamuLife
+https://github.com/nbatfai/SamuLife,
+https://youtu.be/b60m__3I-UM
+
+SamuMovie
+https://github.com/nbatfai/SamuMovie, 
+https://youtu.be/XOPORbI1hz4
+
+SamuStroop
+https://github.com/nbatfai/SamuStroop, 
+https://youtu.be/6elIla_bIrw, 
+https://youtu.be/VujHHeYuzIk
+
+SamuBrain
+https://github.com/nbatfai/SamuBrain
+
+SamuCopy
+https://github.com/nbatfai/SamuCopy
+
+---
+
+SamuTicker
+https://github.com/nbatfai/SamuTicker
+
+SamuVocab
+https://github.com/nbatfai/SamuVocab
